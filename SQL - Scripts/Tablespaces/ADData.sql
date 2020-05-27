@@ -1,8 +1,17 @@
+-- DATA TABLESPACE
 CREATE TABLESPACE AD_DATA
-    DATAFILE 'C:\app\oradata\Mothership\addata01.dbf'
+    DATAFILE 'D:\app\kenne\oradata\DBPRUEBA\addata01.dbf'
     SIZE 10M
     REUSE
     AUTOEXTEND ON
-    NEXT 512K
+    NEXT 512k
     MAXSIZE 200M;
-
+    
+-- INDEX TABLESPACE
+CREATE TABLESPACE AD_INDEX
+    DATAFILE 'D:\app\kenne\oradata\DBPRUEBA\adindex01.dbf'
+    SIZE 10M
+    REUSE
+    AUTOEXTEND ON
+    NEXT 512k
+    MAXSIZE 200M;
