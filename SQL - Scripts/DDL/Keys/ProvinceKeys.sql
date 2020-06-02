@@ -1,0 +1,10 @@
+-- PRIMARY KEY
+ALTER TABLE province
+    ADD CONSTRAINT province_id_pk PRIMARY KEY(id)
+    USING INDEX
+    TABLESPACE ge_index PCTFREE 20
+    STORAGE (INITIAL 10k NEXT 10k PCTINCREASE 0);
+    
+-- FOREIGN KEY
+ALTER TABLE province
+    ADD CONSTRAINT province_country_fk FOREIGN KEY(country_id) REFERENCES country(id);
