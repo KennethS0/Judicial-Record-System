@@ -17,3 +17,7 @@ ALTER TABLE record
     
 ALTER TABLE record
     ADD CONSTRAINT record_person_fk FOREIGN KEY(person_id) REFERENCES person(citizenship_id);
+    
+ALTER TABLE record
+    ADD CONSTRAINT record_number_fk FOREIGN KEY(number_id) REFERENCES judicial_num(id);
+    
