@@ -1,0 +1,5 @@
+INSERT ALL
+    INTO gender VALUES (1, 'FEMALE')
+    INTO gender VALUES (2, 'MALE')
+    INTO gender VALUES (3, 'OTHER')
+SELECT * FROM DUAL
