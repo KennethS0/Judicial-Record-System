@@ -20,4 +20,5 @@ ALTER TABLE record
     
 ALTER TABLE record
     ADD CONSTRAINT record_number_fk FOREIGN KEY(number_id) REFERENCES judicial_num(id);
+    --Hay que agregar NUMBER_ID en la tabla RECORD
     

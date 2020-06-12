@@ -8,3 +8,4 @@ ALTER TABLE crime
 -- FOREIGN KEY
 ALTER TABLE crime
     ADD CONSTRAINT crime_record_fk FOREIGN KEY(record_id) REFERENCES record(id);
+--Hay que cambiar el tipo de dato de CRIME.RECORD_ID a NUMBER para que coincida con id de record
