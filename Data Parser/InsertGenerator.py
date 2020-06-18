@@ -24,7 +24,8 @@ def generateInsert(pFileName, pTable, pColumns, pValues):
 
     for row in pValues:
         values = ', '.join(row)
-        file.write(' ' * 3 + 'INTO {}({}) VALUES ({})'.format(pTable, columns, values) + '\n')
+        string = ' ' * 3 + 'INTO {}({}) VALUES ({})'.format(pTable, columns, values) + '\n'
+        file.write(string)
 
     file.write('SELECT * FROM DUAL;')
     file.close()
@@ -52,9 +53,9 @@ if __name__ == '__main__':
     data = read_csv('.//CSV FILES//cantons.csv')
 
     for row in data:
-        cantonRows.append([row[0], 
-                            row[1],
-                            "'{}'".format(row[2]).upper(),
+        cantonRows.append([str(int(float(row[35]))), 
+                            str(int(float(row[13]))),
+                            "'{}'".format(row[16]).upper(),
                             'USER'])
 
     generateInsert('Canton.sql', 'canton', cantonColumns, cantonRows)
@@ -65,9 +66,9 @@ if __name__ == '__main__':
     data = read_csv('.//CSV FILES//districts.csv')
 
     for row in data:
-        districtRows.append([row[0], 
-                            row[1],
-                            "'{}'".format(row[2]).upper(),
+        districtRows.append([str(int(float(row[-1]))), 
+                            str(int(float(row[39]))),
+                            "'{}'".format(row[24]).upper(),
                             'USER'])
 
     generateInsert('District.sql', 'district', districtColumns, districtRows)
