@@ -39,10 +39,12 @@ if __name__ == '__main__':
     data = read_csv('.//CSV FILES//provinces.csv')
 
     for row in data:
-        provinceRows.append([row[0], 
-                            '1',
-                            "'{}'".format(row[1]).upper(),
-                            'USER'])
+        provinceRows.append([
+            row[0], 
+            '1',
+            "'{}'".format(row[1]).upper(),
+            'USER'
+            ])
 
 
     generateInsert('Province.sql', 'province', provinceColumns, provinceRows)
@@ -53,10 +55,12 @@ if __name__ == '__main__':
     data = read_csv('.//CSV FILES//cantons.csv')
 
     for row in data:
-        cantonRows.append([str(int(float(row[35]))), 
-                            str(int(float(row[13]))),
-                            "'{}'".format(row[16]).upper(),
-                            'USER'])
+        cantonRows.append([
+            str(int(float(row[35]))), 
+            str(int(float(row[13]))),
+            "'{}'".format(row[16]).upper(),
+            'USER'
+            ])
 
     generateInsert('Canton.sql', 'canton', cantonColumns, cantonRows)
 
@@ -66,9 +70,42 @@ if __name__ == '__main__':
     data = read_csv('.//CSV FILES//districts.csv')
 
     for row in data:
-        districtRows.append([str(int(float(row[-1]))), 
-                            str(int(float(row[39]))),
-                            "'{}'".format(row[24]).upper(),
-                            'USER'])
+        districtRows.append([
+            str(int(float(row[-1]))), 
+            str(int(float(row[39]))),
+            "'{}'".format(row[24]).upper(),
+            'USER'
+            ])
 
     generateInsert('District.sql', 'district', districtColumns, districtRows)
+
+    # === CIRCUITS ===
+    circuitColumns = ['id', 'description_', 'canton_id', 'creation_user']
+    circuitRows = []
+    data = read_csv('.//CSV Files//circuitos.csv')
+
+    for row in data:
+        circuitRows.append([
+            str(row[0]),
+            "'{}'".format(row[1]),
+            str(row[2]),
+            'USER'
+            ])
+
+    generateInsert('Judicial_Circuit.sql', 'judicial_circuit', circuitColumns, circuitRows)
+
+    # === OFFICES ===
+    officeColumns = ['judicial_circuit_id', 'id', 'name', 'subject_code', 'creation_user']
+    officeRows = []
+    data = read_csv('.//CSV Files//despachos.csv')
+
+    for row in data:
+        officeRows.append([
+            str(row[0]),
+            str(row[1]),
+            "'{}'".format(row[2]),
+            "'{}'".format(row[3]),
+            'USER'
+        ])
+
+    generateInsert('Office.sql', 'office', officeColumns, officeRows)
