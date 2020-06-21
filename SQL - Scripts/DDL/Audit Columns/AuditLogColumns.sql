@@ -4,7 +4,7 @@ ALTER TABLE address
         creation_user VARCHAR2(10) CONSTRAINT address_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT address_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE adminbans
@@ -12,7 +12,7 @@ ALTER TABLE adminbans
         creation_user VARCHAR2(10) CONSTRAINT adminbans_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT adminbans_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE administrator
@@ -20,7 +20,7 @@ ALTER TABLE administrator
         creation_user VARCHAR2(10) CONSTRAINT admin_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT admin_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE ban
@@ -28,7 +28,7 @@ ALTER TABLE ban
         creation_user VARCHAR2(10) CONSTRAINT ban_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT ban_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE canton
@@ -36,7 +36,7 @@ ALTER TABLE canton
         creation_user VARCHAR2(10) CONSTRAINT canton_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT canton_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE community
@@ -44,7 +44,7 @@ ALTER TABLE community
         creation_user VARCHAR2(10) CONSTRAINT community_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT community_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE country
@@ -52,7 +52,7 @@ ALTER TABLE country
         creation_user VARCHAR2(10) CONSTRAINT country_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT country_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE crime
@@ -60,7 +60,7 @@ ALTER TABLE crime
         creation_user VARCHAR2(10) CONSTRAINT crime_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT crime_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE district
@@ -68,7 +68,7 @@ ALTER TABLE district
         creation_user VARCHAR2(10) CONSTRAINT district_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT district_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
 
 ALTER TABLE gender
@@ -76,7 +76,7 @@ ALTER TABLE gender
         creation_user VARCHAR2(10) CONSTRAINT gender_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT gender_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE judicial_circuit
@@ -84,7 +84,7 @@ ALTER TABLE judicial_circuit
         creation_user VARCHAR2(10) CONSTRAINT judicial_circuit_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT judicial_circuit_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE judicial_num
@@ -92,7 +92,7 @@ ALTER TABLE judicial_num
         creation_user VARCHAR2(10) CONSTRAINT judicial_num_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT judicial_num_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE office
@@ -100,14 +100,14 @@ ALTER TABLE office
         creation_user VARCHAR2(10) CONSTRAINT office_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT office_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE passwordhistory
     ADD (
         creation_user VARCHAR2(10) CONSTRAINT password_history_c_user_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE person
@@ -115,7 +115,7 @@ ALTER TABLE person
         creation_user VARCHAR2(10) CONSTRAINT person_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT person_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE person_sues_person
@@ -123,7 +123,7 @@ ALTER TABLE person_sues_person
         creation_user VARCHAR2(10) CONSTRAINT person_sues_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT person_sues_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE photo
@@ -131,7 +131,7 @@ ALTER TABLE photo
         creation_user VARCHAR2(10) CONSTRAINT photo_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT photo_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE province
@@ -139,14 +139,14 @@ ALTER TABLE province
         creation_user VARCHAR2(10) CONSTRAINT province_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT province_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE record
     ADD (
         creation_user VARCHAR2(10) CONSTRAINT record_c_user_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE resolution
@@ -154,7 +154,7 @@ ALTER TABLE resolution
         creation_user VARCHAR2(10) CONSTRAINT resolution_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT resolution_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE sentence
@@ -162,7 +162,7 @@ ALTER TABLE sentence
         creation_user VARCHAR2(10) CONSTRAINT sentence_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT sentence_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE type_of_record
@@ -170,7 +170,7 @@ ALTER TABLE type_of_record
         creation_user VARCHAR2(10) CONSTRAINT type_record_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT type_record_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE type_of_sentence
@@ -178,12 +178,12 @@ ALTER TABLE type_of_sentence
         creation_user VARCHAR2(10) CONSTRAINT type_sentence_c_user_nn NOT NULL,
         creation_date DATE DEFAULT SYSDATE CONSTRAINT type_sentence_c_date_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
         
 ALTER TABLE useraccount
     ADD (
         creation_user VARCHAR2(10) CONSTRAINT useraccount_c_user_nn NOT NULL,
         modification_user VARCHAR2(10),
-        modificacion_date DATE
+        MODIFICATION_DATE DATE
         );
