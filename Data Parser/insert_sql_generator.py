@@ -16,7 +16,7 @@ def read_csv(pFile):
 # Generates a .sql file with the specific inserts
 def generateInsert(pFileName, pTable, pColumns, pValues):
     
-    file = open(pFileName, 'a')
+    file = open(pFileName, 'a', encoding='utf-8')
 
     columns= ', '.join(pColumns)
 
@@ -109,3 +109,23 @@ if __name__ == '__main__':
         ])
 
     generateInsert('Office.sql', 'office', officeColumns, officeRows)
+
+    # === COMMUNITIES ===
+    commColumns = ['id', 'district_id', 'name', 'creation_user']
+    commRows = []
+    data = read_csv('.//CSV Files//barrios.csv')
+
+    for row in data:
+        # Generate correct ID's
+        district_id = str(row[0]) + str(row[2]).zfill(2) + str(row[4]).zfill(2)
+        id = district_id + str(row[6]).zfill(2)
+        
+        commRows.append([
+            id,
+            district_id,
+            "'{}'".format(row[7]).upper(),
+            'USER'
+        ])
+
+
+    generateInsert('Community.sql', 'community', commColumns, commRows)
