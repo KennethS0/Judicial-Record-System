@@ -1,5 +1,5 @@
 INSERT ALL
-    INTO gender(id, description_, creation_user) VALUES (1, 'FEMALE', USER)
-    INTO gender(id, description_, creation_user) VALUES (2, 'MALE', USER)
-    INTO gender(id, description_, creation_user) VALUES (3, 'OTHER', USER)
+    INTO gender(id, description_) VALUES (1, 'FEMALE')
+    INTO gender(id, description_) VALUES (2, 'MALE')
+    INTO gender(id, description_) VALUES (3, 'OTHER')
 SELECT * FROM DUAL;

@@ -3,6 +3,7 @@ BEFORE INSERT
 ON address
 FOR EACH ROW
 BEGIN
+    :new.id := ge.address_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -23,6 +24,7 @@ BEFORE INSERT
 ON administrator
 FOR EACH ROW
 BEGIN
+    :new.id := ge.administrator_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -33,6 +35,7 @@ BEFORE INSERT
 ON ban
 FOR EACH ROW
 BEGIN
+    :new.id := ge.ban_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -73,6 +76,7 @@ BEFORE INSERT
 ON crime
 FOR EACH ROW
 BEGIN
+    :new.id := ge.crime_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -133,6 +137,7 @@ BEFORE INSERT
 ON passwordhistory
 FOR EACH ROW
 BEGIN
+    :new.id := ge.passwordhistory_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -163,6 +168,7 @@ BEFORE INSERT
 ON photo
 FOR EACH ROW
 BEGIN
+    :new.id := ge.photo_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -183,6 +189,7 @@ BEFORE INSERT
 ON record
 FOR EACH ROW
 BEGIN
+    :new.id := ge.record_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -193,6 +200,7 @@ BEFORE INSERT
 ON resolution
 FOR EACH ROW
 BEGIN
+    :new.id := ge.resolution_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -203,6 +211,7 @@ BEFORE INSERT
 ON sentence
 FOR EACH ROW
 BEGIN
+    :new.id := ge.sentence_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -235,6 +244,7 @@ BEFORE INSERT
 ON useraccount
 FOR EACH ROW
 BEGIN
+    :new.id := ge.useraccount_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
