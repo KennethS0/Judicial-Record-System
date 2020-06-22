@@ -34,7 +34,7 @@ def generateInsert(pFileName, pTable, pColumns, pValues):
 if __name__ == '__main__':
     
     # === PROVINCES ===
-    provinceColumns = ['id', 'country_id', 'name', 'creation_user']
+    provinceColumns = ['id', 'country_id', 'name']
     provinceRows = []
     data = read_csv('.//CSV FILES//provinces.csv')
 
@@ -42,15 +42,14 @@ if __name__ == '__main__':
         provinceRows.append([
             row[0], 
             '1',
-            "'{}'".format(row[1]).upper(),
-            'USER'
+            "'{}'".format(row[1]).upper()
             ])
 
 
     generateInsert('Province.sql', 'province', provinceColumns, provinceRows)
 
     # === CANTONS ===
-    cantonColumns = ['id', 'province_id', 'name', 'creation_user']
+    cantonColumns = ['id', 'province_id', 'name']
     cantonRows = []
     data = read_csv('.//CSV FILES//cantons.csv')
 
@@ -58,14 +57,13 @@ if __name__ == '__main__':
         cantonRows.append([
             str(int(float(row[35]))), 
             str(int(float(row[13]))),
-            "'{}'".format(row[16]).upper(),
-            'USER'
+            "'{}'".format(row[16]).upper()
             ])
 
     generateInsert('Canton.sql', 'canton', cantonColumns, cantonRows)
 
     # === DISTRICTS === 
-    districtColumns = ['id', 'canton_id', 'name', 'creation_user']
+    districtColumns = ['id', 'canton_id', 'name']
     districtRows = []
     data = read_csv('.//CSV FILES//districts.csv')
 
@@ -73,14 +71,13 @@ if __name__ == '__main__':
         districtRows.append([
             str(int(float(row[-1]))), 
             str(int(float(row[39]))),
-            "'{}'".format(row[24]).upper(),
-            'USER'
+            "'{}'".format(row[24]).upper()
             ])
 
     generateInsert('District.sql', 'district', districtColumns, districtRows)
 
     # === CIRCUITS ===
-    circuitColumns = ['id', 'description_', 'canton_id', 'creation_user']
+    circuitColumns = ['id', 'description_', 'canton_id']
     circuitRows = []
     data = read_csv('.//CSV Files//circuitos.csv')
 
@@ -88,14 +85,13 @@ if __name__ == '__main__':
         circuitRows.append([
             str(row[0]),
             "'{}'".format(row[1]),
-            str(row[2]),
-            'USER'
+            str(row[2])
             ])
 
     generateInsert('Judicial_Circuit.sql', 'judicial_circuit', circuitColumns, circuitRows)
 
     # === OFFICES ===
-    officeColumns = ['judicial_circuit_id', 'id', 'name', 'subject_code', 'creation_user']
+    officeColumns = ['judicial_circuit_id', 'id', 'name', 'subject_code']
     officeRows = []
     data = read_csv('.//CSV Files//despachos.csv')
 
@@ -104,14 +100,13 @@ if __name__ == '__main__':
             str(row[0]),
             str(row[1]),
             "'{}'".format(row[2]),
-            "'{}'".format(row[3]),
-            'USER'
-        ])
+            "'{}'".format(row[3])
+            ])
 
     generateInsert('Office.sql', 'office', officeColumns, officeRows)
 
     # === COMMUNITIES ===
-    commColumns = ['id', 'district_id', 'name', 'creation_user']
+    commColumns = ['id', 'district_id', 'name']
     commRows = []
     data = read_csv('.//CSV Files//barrios.csv')
 
@@ -123,9 +118,8 @@ if __name__ == '__main__':
         commRows.append([
             id,
             district_id,
-            "'{}'".format(row[7]).upper(),
-            'USER'
-        ])
+            "'{}'".format(row[7]).upper()
+            ])
 
 
     generateInsert('Community.sql', 'community', commColumns, commRows)
