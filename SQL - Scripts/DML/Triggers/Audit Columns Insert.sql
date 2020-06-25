@@ -117,6 +117,7 @@ BEFORE INSERT
 ON judicial_num
 FOR EACH ROW
 BEGIN
+    :new.id := ge.judicial_num_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;
@@ -158,6 +159,7 @@ BEFORE INSERT
 ON person_sues_person
 FOR EACH ROW
 BEGIN
+    :new.id := ge.person_sues_person_sequence.NEXTVAL;
     :new.creation_user := USER;
     :new.creation_date := SYSDATE;
 END;

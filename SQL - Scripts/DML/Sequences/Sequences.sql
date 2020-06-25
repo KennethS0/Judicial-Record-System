@@ -96,3 +96,12 @@ CREATE SEQUENCE ge.useraccount_sequence
     NOCYCLE
     NOCACHE
     ORDER;
+    
+CREATE SEQUENCE ge.judicial_num_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;    
