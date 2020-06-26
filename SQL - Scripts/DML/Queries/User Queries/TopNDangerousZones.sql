@@ -1,4 +1,4 @@
-DECLARE @N NUM
+DECLARE @N INT;
 SELECT @N = 3
 
 SELECT TOP(@N) canton.name, count(record.id)
