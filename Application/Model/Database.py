@@ -85,17 +85,22 @@ class Database():
             print('Error inserting user:', err)
 
 
-    def adminQuery (self, pType, pPackageInstruction, pArguments=[]):
+    def adminQuery (self, pType, pPackageInstruction, parameters=[], returnType=None, getRows=False):
         '''
             Returns the result of a specified query
+            pType : Type of query (PROCEDURE or FUNCTION)
+            pPackageInstruction: Instruction defined in the Database Packages
+            parameters: List of parameters that the function or procedure needs
+            returnType: Must match the value returned by a function
+            getRows: True if it is expected to return rows.
         '''
         if pType == Instructions.PROCEDURE:
-            return self.adminProcedure(pPackageInstruction, pArguments)
+            return self.__adminProcedure(pPackageInstruction, parameters, getRows)
         elif pType == Instructions.FUNCTION:
-            return self.adminFunction(pPackageInstruction, pArguments)
+            return self.__adminFunction(pPackageInstruction, parameters, returnType)
 
 
-    def adminProcedure(self, pPackageInstruction, pArguments):
+    def __adminProcedure(self, pPackageInstruction, pArguments, pGetRows):
         '''
         Returns all the selected rows from the table IF
         the user has permissions to view them.
@@ -109,21 +114,102 @@ class Database():
                 cursor = self.connection.cursor()
                 # Sets the refCursorVar to get output from the procedure
                 refCursor = self.connection.cursor()
-                pArguments.append(refCursor)
+
+                if pGetRows:
+                    pArguments.append(refCursor)
                 
                 # Calls the procedure
                 cursor.callproc(pPackageInstruction, pArguments)
                 
                 # Gets the value returned by the procedure
 
-                result = refCursor.fetchall()
                 cursor.close()
 
-                return result
+                return refCursor
         
         except Exception as err:
             print(err)
 
 
-        def adminFunction(self, pPackageInstruction, pArguments):
-            pass
+    def __adminFunction(self, pPackageInstruction, pArguments, pReturnType):
+        '''
+        Returns the value returned by a specific query.
+        '''
+        if pReturnType == None or not ( self.userConnected and self.userConnected.isAdmin):
+            return
+
+        try: 
+            cursor = self.connection.cursor()
+            
+            # Calls the function from the SQL PACKAGE
+            value = cursor.callfunc(pPackageInstruction, pReturnType, pArguments)
+            cursor.close()
+            return value
+
+        except Exception as err:
+            print(err)
+
+
+    def userQuery (self, pType, pPackageInstruction, parameters=[], returnType=None, getRows=False):
+        '''
+            Returns the result of a specified query
+            pType : Type of query (PROCEDURE or FUNCTION)
+            pPackageInstruction: Instruction defined in the Database Packages
+            parameters: List of parameters that the function or procedure needs
+            returnType: Must match the value returned by a function
+            getRows: True if it is expected to return rows.
+        '''
+        if pType == Instructions.PROCEDURE:
+            return self.__userProcedure(pPackageInstruction, parameters, getRows)
+        elif pType == Instructions.FUNCTION:
+            return self.__userFunction(pPackageInstruction, parameters, returnType)
+
+
+    def __userProcedure(self, pPackageInstruction, pArguments, pGetRows):
+        '''
+        Returns all the selected rows from the table IF
+        the user has permissions to view them.
+        '''
+        try:
+            # Checks for valid user (has to be an admin)
+            if not self.userConnected:
+                return
+
+            else:
+                cursor = self.connection.cursor()
+                # Sets the refCursorVar to get output from the procedure
+                refCursor = self.connection.cursor()
+
+                if pGetRows:
+                    pArguments.append(refCursor)
+                
+                # Calls the procedure
+                cursor.callproc(pPackageInstruction, pArguments)
+                
+                # Gets the value returned by the procedure
+
+                cursor.close()
+
+                return refCursor
+        
+        except Exception as err:
+            print(err)
+
+
+    def _userFunction(self, pPackageInstruction, pArguments, pReturnType):
+        '''
+        Returns the value returned by a specific query.
+        '''
+        if pReturnType == None or not self.userConnected:
+            return
+
+        try: 
+            cursor = self.connection.cursor()
+            
+            # Calls the function from the SQL PACKAGE
+            value = cursor.callfunc(pPackageInstruction, pReturnType, pArguments)
+            cursor.close()
+            return value
+
+        except Exception as err:
+            print(err)

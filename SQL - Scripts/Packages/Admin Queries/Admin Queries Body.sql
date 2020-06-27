@@ -2,7 +2,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
 
 
     -- GETS ALL THE USERS THAT HAD THEIR PASSWORDS MODIFIED IN A RANGE OF DATES
-    PROCEDURE getModifiedPasswords (pInitialDate IN VARCHAR2, pFinalDate IN VARCHAR2, pRecordset OUT SYS_REFCURSOR) AS
+    PROCEDURE getModifiedPasswords (pInitialDate IN DATE, pFinalDate IN DATE, pRecordset OUT SYS_REFCURSOR) AS
     BEGIN
      OPEN pRecordset FOR   
         -- Shows all the accounts that have changed their password in a range of dates.
@@ -13,7 +13,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
         ON ua.id = ph.user_id
 
         -- Condition to show in a range of two dates.
-        WHERE ph.creation_date BETWEEN TO_DATE(pInitialDate, 'DD/MM/YYYY') AND TO_DATE(pFinalDate, 'DD/MM/YYYY') + 1; 
+        WHERE ph.creation_date BETWEEN pInitialDate AND pFinalDate + 1; 
     END;
         
             
