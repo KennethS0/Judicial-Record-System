@@ -1,0 +1,107 @@
+CREATE SEQUENCE ge.address_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+    
+CREATE SEQUENCE ge.administrator_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+
+CREATE SEQUENCE ge.ban_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+
+CREATE SEQUENCE ge.crime_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+    
+CREATE SEQUENCE ge.passwordhistory_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+
+CREATE SEQUENCE ge.person_sues_person_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+    
+CREATE SEQUENCE ge.photo_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+
+CREATE SEQUENCE ge.record_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+    
+CREATE SEQUENCE ge.resolution_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+
+CREATE SEQUENCE ge.sentence_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+
+CREATE SEQUENCE ge.useraccount_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;
+    
+CREATE SEQUENCE ge.judicial_num_sequence
+    INCREMENT BY 1
+    START WITH 1
+    MAXVALUE 999999
+    MINVALUE 1
+    NOCYCLE
+    NOCACHE
+    ORDER;    

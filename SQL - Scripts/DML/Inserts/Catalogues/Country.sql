@@ -1,2 +1,2 @@
-INSERT INTO country(id, name, creation_user)
-    VALUES(1, 'COSTA RICA', USER);
+INSERT INTO country(id, name)
+    VALUES(1, 'COSTA RICA');

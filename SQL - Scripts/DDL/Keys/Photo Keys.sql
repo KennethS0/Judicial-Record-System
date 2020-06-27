@@ -8,3 +8,4 @@ ALTER TABLE photo
 -- FOREIGN KEY
 ALTER TABLE photo
     ADD CONSTRAINT photo_record_fk FOREIGN KEY(record_id) REFERENCES record(id);
+    --Hay que cambiar PHOTO.RECORD_ID a NUMBER para que coincida con ID de RECORD
