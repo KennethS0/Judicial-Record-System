@@ -3,12 +3,11 @@ import cx_Oracle
 from Application.Model.User import User
 
 '''
-    Database class:
+    Database class (SINGLETON):
         This class is responsible for all connections,
         queries and data manipulation  
 '''
 class Database():
-
 
     # Constructor method
     def __init__(self, pConnection = ''):
@@ -45,13 +44,14 @@ class Database():
             user_id = cursor.callfunc('LOGINSYSTEM.LOGIN', int, data)
 
             # Sets the connected user with the corresponding information
-            self.userConnected = User(user_id, pUser, pPassword) 
+            self.userConnected = User(user_id, pUser, pPassword)
+            self.userConnected.isAdmin = cursor.callfunc('USERDATA.ISADMIN', int, [user_id])
 
             cursor.close()
 
-        except:
+        except Exception as err:
             self.userConnected= None
-            print('NO USER WAS FOUND')
+            print(err)
 
 
     def signUp(self, pUser, pPassword):

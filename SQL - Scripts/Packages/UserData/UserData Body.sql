@@ -80,19 +80,15 @@ CREATE OR REPLACE PACKAGE BODY userdata AS
     
     
     -- CHECKS IF A USER IS AN ADMIN
+    -- pId, refers to its ID in USERACCOUNT
     FUNCTION isAdmin (pId NUMBER)
     RETURN NUMBER
     IS 
-        verified NUMBER(1) := 0;
-        userCopy VARCHAR2(20);
+        verified NUMBER(1);
     BEGIN
-        -- SELECTS THE NAME OF THE USER IF THE ID IS VALID
-        SELECT username INTO userCopy FROM administrator
-        WHERE id = pId;
-        
-        IF userCopy IS NOT NULL THEN
-            verified := 1;
-        END IF;
+        -- SELECTS THE AMOUNT OF TIMES THAT THE NAME IS REPEATED 
+        SELECT COUNT(username) INTO verified FROM administrator
+        WHERE user_id = pId;
         
         RETURN(verified);
     END;
