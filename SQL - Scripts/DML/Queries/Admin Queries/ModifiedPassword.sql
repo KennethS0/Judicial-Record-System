@@ -6,4 +6,4 @@ INNER JOIN useraccount ua
 ON ua.id = ph.user_id
 
 -- Condition to show in a range of two dates.
-WHERE ph.creation_date BETWEEN TO_DATE('24/JUN/20', 'dd/mm/yy') AND TO_DATE('24/JUN/20', 'dd/mm/yy') + 1; 
+WHERE ph.creation_date BETWEEN TO_DATE('18/JUN/2020', 'dd/mm/yyyy') AND TO_DATE('26/JUN/2020', 'dd/mm/yyyy') + 1; 

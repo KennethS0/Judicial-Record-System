@@ -1,8 +1,15 @@
 from Application.Model.Database import Database
+import Application.Model.Instructions as Instructions
 
 if __name__ == '__main__':
     db = Database('ge/ge@//localhost:1521/Judicial_Record_System')
 
-    db.logUser('MARIABLANCOSANDRA', 'bc0c67c6c9833fed5acd7f6d156755092aa076f1a1e808196e7a25bbf44449a5')
+    db.logUser('KSANCHEZ0', '6deebef7ced82f6a0050f60102ffc4407a430c3ccfb8ff6d93b1dbf8056ed967')
+    
+    values = db.adminQuery(Instructions.PROCEDURE , Instructions.MODIFIED_PASSWORDS, ['4/JUN/2020', '26/JUN/2020'])
+    print(values)
+
+    values2 = db.adminQuery(Instructions.PROCEDURE, Instructions.UNRESOLVED_RECORDS)
+    print(values2)
     
     db.disconnect()
