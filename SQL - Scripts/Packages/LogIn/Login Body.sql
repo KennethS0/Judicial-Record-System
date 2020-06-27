@@ -2,7 +2,7 @@ CREATE OR REPLACE PACKAGE BODY LogInSystem AS
        
        
     -- CHECKS DATA OF THE USER AND RETURNS ITS ID IF FOUND
-    FUNCTION login (pUsername VARCHAR2, pPassword VARCHAR2)
+    FUNCTION login (pUsername IN VARCHAR2, pPassword IN VARCHAR2)
     RETURN NUMBER 
     IS 
         useraccountId NUMBER;
@@ -16,84 +16,13 @@ CREATE OR REPLACE PACKAGE BODY LogInSystem AS
     
        
     -- INSERTS A USER INTO THE DATABASE
-    PROCEDURE signup (pUsername VARCHAR2, pPassword VARCHAR2) 
+    PROCEDURE signup (pUsername IN VARCHAR2, pPassword IN VARCHAR2) 
     IS
-        user_id NUMBER(10);
     BEGIN 
-        -- LOOKS FOR THE ID OF THE USER
-        SELECT id INTO user_id FROM useraccount
-        WHERE EXISTS (SELECT id FROM useraccount WHERE username = pUsername);
-        
-        -- IF THE ID IS FOUND THEN IT DISPLAYS A MESSAGE
-        IF user_id IS NOT NULL THEN
-            dbms_output.put_line('USER ALREADY EXISTS');
-            
-        -- IF THE ID ITS NOT FOUND THEN IT IS INSERTED
-        ELSE
-            INSERT INTO useraccount (username, password)
-            VALUES (pUsername, pPassword);
-            COMMIT;
-        END IF;
-    END;
-    
-    
-    -- CHANGES THE PASSWORD OF A USER, INTENDED TO BE USED BY A USER
-    PROCEDURE changePasswordAsUser (pUsername VARCHAR2, pOldPassword VARCHAR2, pNewPassword VARCHAR2) 
-    IS
-        oldPassword VARCHAR2(64);
-    BEGIN
-        
-        -- QUERY TO SELECT THE PASSWORD OF THE USER
-        SELECT password INTO oldPassword FROM useraccount
-        WHERE username = pUsername;
-    
-    
-        -- EITHER UPDATES THE PASSWORD OR SHOWS AN ERROR MESSAGE
-        IF oldPassword = pOldPassword THEN
-            UPDATE useraccount
-            SET password = pNewPassword
-            WHERE username = pUsername AND password = pOldPassword;
-            COMMIT;
-        ELSE 
-            dbms_output.put_line('INVALID USERNAME OR PASSWORD');
-        END IF;
-    END;
-    
-    
-    -- CHANGES THE PASSWORD OF A USER, 
-    -- INTENDED TO BE USED BY AN ADMINISTRATOR
-    -- TO CHANGE ANY PASSWORD
-    PROCEDURE changePasswordAsAdmin (pUsername VARCHAR2, pNewPassword VARCHAR2) 
-    IS
-    BEGIN
-        UPDATE useraccount
-        SET password = pNewPassword
-        WHERE username = pUsername;
-        
+        INSERT INTO useraccount(username, password)
+        VALUES (pUsername, pPassword);
         COMMIT;
     END;
-    
-    
-    -- VERIFIES IF THE USER IS ACTUALLY THE ONE USING THE ACCOUNT
-    -- INTENDED TO BE USED WHEN MANAGING INFORMATION (PRIVACY)
-    FUNCTION verifyUser (pId NUMBER, pPassword VARCHAR2)
-    RETURN NUMBER IS 
-        verified NUMBER(1) := 0;
-        passwordCopy VARCHAR2(64);
-    BEGIN
-        -- RETURNS 1 (TRUE) IF THE PASSWORD MATCHES THE ONE THAT THE USER HAS.
-        -- RETURNS 0 (FALSE) IF IT DOESNT
-        SELECT password INTO passwordCopy FROM useraccount
-        WHERE id = pId;
-            
-            
-        IF passwordCopy = pPassword THEN
-            verified := 1;
-        END IF;
         
-        RETURN (verified);
-    END;
-    
-    
 END LogInSystem;
 /

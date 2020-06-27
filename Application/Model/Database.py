@@ -1,5 +1,7 @@
 import cx_Oracle
 
+from Application.Model.User import User
+
 '''
     Database class:
         This class is responsible for all connections,
@@ -11,8 +13,9 @@ class Database():
     # Constructor method
     def __init__(self, pConnection = ''):
         # No user connected
-        self.user_id = None
+        self.userConnected = None
         
+        # Declaring a connection right away
         if pConnection:
             self.connection = cx_Oracle.connect(pConnection)
         else:
@@ -36,17 +39,32 @@ class Database():
     def logUser(self, pUser, pPassword):
         try: 
             cursor = self.connection.cursor()
+            
+            # Calls the function from the SQL PACKAGE
             data = [pUser, pPassword]
             user_id = cursor.callfunc('LOGINSYSTEM.LOGIN', int, data)
+
+            # Sets the connected user with the corresponding information
+            self.userConnected = User(user_id, pUser, pPassword) 
+
             cursor.close()
 
-            self.user_id = user_id
         except:
-            self.user_id = None
+            self.userConnected= None
             print('NO USER WAS FOUND')
 
 
-    # Checks whether the logged user is also an administrator
-    def isAdmin(self):
+    def signUp(self, pUser, pPassword):
         try:
-            pass
+            cursor = self.connection.cursor()
+
+            data = (pUser, pPassword)
+
+            print(pUser, pPassword)
+
+            cursor.callproc('LOGINSYSTEM.SIGNUP', data)
+
+            cursor.close()
+
+        except Exception as err:
+            print('Error inserting user:', err)
