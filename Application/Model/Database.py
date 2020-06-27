@@ -11,6 +11,12 @@ class Database():
 
     # Constructor method
     def __init__(self, pConnection = ''):
+        '''
+        Creates an instance of Database, if a connection
+        is passed as the argument then it will connect
+        autimatically.
+        '''
+        
         # No user connected
         self.userConnected = None
         
@@ -21,21 +27,28 @@ class Database():
             self.connection = None
         
 
-    # Connects to the specified database
     def connect(self, pConnection):
+        '''
+        Connects to the specified database
+        '''
         try:
             self.connection = cx_Oracle.connect(pConnection)
         except:
             print('Error occured')
 
 
-    # Disconnects from the database
     def disconnect(self):
+        '''
+            Closes the database connection.
+        '''
         self.connection.close()
 
 
-    # Save the id of the user that logs in
     def logUser(self, pUser, pPassword):
+        '''
+            Logs in a user and sets it to connectedUser
+            in the database object.
+        '''
         try: 
             cursor = self.connection.cursor()
             
@@ -55,16 +68,18 @@ class Database():
 
 
     def signUp(self, pUser, pPassword):
+        '''
+        Registers a user into the database.
+        '''
         try:
             cursor = self.connection.cursor()
-
             data = (pUser, pPassword)
 
-            print(pUser, pPassword)
-
+            # Inserts the data, calling the procedure
             cursor.callproc('LOGINSYSTEM.SIGNUP', data)
 
             cursor.close()
 
         except Exception as err:
             print('Error inserting user:', err)
+
