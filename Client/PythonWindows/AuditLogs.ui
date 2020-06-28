@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AuditLogs</class>
+ <widget class="QMainWindow" name="AuditLogs">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>1531</width>
+    <height>889</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>AuditLogs</string>
+  </property>
+  <widget class="QWidget" name="centralwidget">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>0</x>
+      <y>0</y>
+      <width>1531</width>
+      <height>851</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="BackgroundLabel">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>1531</width>
+       <height>851</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="pixmap">
+      <pixmap>Images/Audit Logs.png</pixmap>
+     </property>
+     <property name="scaledContents">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DataButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="RecordsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>400</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="StatisticsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>460</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="LogOutButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>790</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="UsernameLabel">
+     <property name="geometry">
+      <rect>
+       <x>1400</x>
+       <y>20</y>
+       <width>81</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>14</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>BlankCursor</cursorShape>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="styleSheet">
+      <string notr="true">color: rgb(234, 234, 234);</string>
+     </property>
+     <property name="text">
+      <string>Username</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="HomeButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>60</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AuditLogButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>290</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="CatalogButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>340</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="SubmitButton">
+     <property name="geometry">
+      <rect>
+       <x>1290</x>
+       <y>713</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="UserBanButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>170</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="PersonRegisterbutton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>230</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="TableSelect">
+     <property name="geometry">
+      <rect>
+       <x>526</x>
+       <y>160</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="UserSelect">
+     <property name="geometry">
+      <rect>
+       <x>527</x>
+       <y>400</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="InitialDateUserPass">
+     <property name="geometry">
+      <rect>
+       <x>976</x>
+       <y>165</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="FinalDateUserPass">
+     <property name="geometry">
+      <rect>
+       <x>1172</x>
+       <y>164</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLabel" name="LastDataDisplay">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>220</y>
+       <width>381</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="UserPassDisplay">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>460</y>
+       <width>381</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="UserPassByDateDisplay">
+     <property name="geometry">
+      <rect>
+       <x>910</x>
+       <y>220</y>
+       <width>381</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+  <widget class="QMenuBar" name="menubar">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>1531</width>
+     <height>21</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QStatusBar" name="statusbar"/>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

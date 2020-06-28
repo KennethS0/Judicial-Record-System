@@ -656,6 +656,12 @@
        <height>32</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
     </widget>
     <widget class="QComboBox" name="Genre">
      <property name="geometry">
@@ -666,6 +672,12 @@
        <height>31</height>
       </rect>
      </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
     </widget>
     <widget class="QComboBox" name="RecordResolution">
      <property name="geometry">
@@ -675,6 +687,12 @@
        <width>191</width>
        <height>31</height>
       </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
      </property>
     </widget>
     <widget class="QLineEdit" name="Institution">
