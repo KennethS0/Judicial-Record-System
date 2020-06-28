@@ -1,7 +1,7 @@
 import cx_Oracle
 
 from Application.Model.User import User
-import Application.Model.Instructions as Instructions
+from Application.Model.DatabaseConnection import Instructions as I
 
 '''
     Database class (SINGLETON):
@@ -58,7 +58,7 @@ class Database():
             user_id = cursor.callfunc('LOGINSYSTEM.LOGIN', int, data)
 
             # Sets the connected user with the corresponding information
-            self.userConnected = User(user_id, pUser, pPassword)
+            self.userConnected = User.User(user_id, pUser, pPassword)
             self.userConnected.isAdmin = cursor.callfunc('USERDATA.ISADMIN', int, [user_id])
 
             cursor.close()
@@ -94,9 +94,9 @@ class Database():
             returnType: Must match the value returned by a function
             getRows: True if it is expected to return rows.
         '''
-        if pType == Instructions.PROCEDURE:
+        if pType == I.PROCEDURE:
             return self.__adminProcedure(pPackageInstruction, parameters, getRows)
-        elif pType == Instructions.FUNCTION:
+        elif pType == I.FUNCTION:
             return self.__adminFunction(pPackageInstruction, parameters, returnType)
 
 
@@ -159,9 +159,9 @@ class Database():
             returnType: Must match the value returned by a function
             getRows: True if it is expected to return rows.
         '''
-        if pType == Instructions.PROCEDURE:
+        if pType == I.PROCEDURE:
             return self.__userProcedure(pPackageInstruction, parameters, getRows)
-        elif pType == Instructions.FUNCTION:
+        elif pType == I.FUNCTION:
             return self.__userFunction(pPackageInstruction, parameters, returnType)
 
 
