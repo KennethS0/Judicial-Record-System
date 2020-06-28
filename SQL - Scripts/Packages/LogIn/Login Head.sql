@@ -1,0 +1,13 @@
+CREATE OR REPLACE PACKAGE LogInSystem AS
+    
+    -- CHECKS DATA OF THE USER AND RETURNS ITS ID IF FOUND
+    FUNCTION login (pUsername IN VARCHAR2, pPassword IN VARCHAR2)
+    RETURN NUMBER; 
+    
+    -- INSERTS A USER INTO THE DATABASE
+    PROCEDURE signup (pUsername IN VARCHAR2, pPassword IN VARCHAR2);
+    
+END LogInSystem;
+/
+
+
