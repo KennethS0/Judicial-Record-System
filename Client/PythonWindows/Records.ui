@@ -1,17 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ui version="4.0">
- <class>AuditLogs</class>
- <widget class="QMainWindow" name="AuditLogs">
+ <class>Records</class>
+ <widget class="QMainWindow" name="Records">
   <property name="geometry">
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1530</width>
-    <height>889</height>
+    <width>1526</width>
+    <height>872</height>
    </rect>
   </property>
   <property name="windowTitle">
-   <string>AuditLogs</string>
+   <string>Records</string>
   </property>
   <widget class="QWidget" name="centralwidget">
    <widget class="QFrame" name="frame">
@@ -19,8 +19,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>1531</width>
-      <height>851</height>
+      <width>1541</width>
+      <height>861</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -29,20 +29,20 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgroundLabel">
+    <widget class="QLabel" name="BackgLabel">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1531</width>
-       <height>851</height>
+       <width>1521</width>
+       <height>831</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>Images/AuditLogs.png</pixmap>
+      <pixmap>Images/Records.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
@@ -52,7 +52,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>120</y>
+       <y>110</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -68,7 +68,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>400</y>
+       <y>390</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -84,7 +84,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>460</y>
+       <y>450</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -100,7 +100,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>790</y>
+       <y>770</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -115,7 +115,7 @@
     <widget class="QLabel" name="UsernameLabel">
      <property name="geometry">
       <rect>
-       <x>1400</x>
+       <x>1390</x>
        <y>20</y>
        <width>81</width>
        <height>21</height>
@@ -160,7 +160,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>290</y>
+       <y>280</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -179,22 +179,6 @@
        <y>340</y>
        <width>241</width>
        <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="LastModDataButton">
-     <property name="geometry">
-      <rect>
-       <x>539</x>
-       <y>382</y>
-       <width>127</width>
-       <height>33</height>
       </rect>
      </property>
      <property name="text">
@@ -236,43 +220,147 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QComboBox" name="LastModDataTableSelect">
+    <widget class="QLineEdit" name="FourthSpaceRecNum">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
      <property name="geometry">
       <rect>
-       <x>526</x>
+       <x>733</x>
+       <y>242</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="FirstSpaceRecordNum">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>427</x>
+       <y>242</y>
+       <width>61</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="SecSpaceRecordNum">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>520</x>
+       <y>241</y>
+       <width>91</width>
+       <height>30</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="ThirdSpaceRecNum">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>643</x>
+       <y>241</y>
+       <width>61</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="AverageResFinalDate">
+     <property name="geometry">
+      <rect>
+       <x>1160</x>
        <y>160</y>
-       <width>151</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="PassChangeUserSelect">
-     <property name="geometry">
-      <rect>
-       <x>527</x>
-       <y>472</y>
-       <width>151</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QDateEdit" name="InitialDateUserPass">
-     <property name="geometry">
-      <rect>
-       <x>976</x>
-       <y>165</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -305,11 +393,11 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="FinalDateUserPass">
+    <widget class="QDateEdit" name="AverageResInitialDate">
      <property name="geometry">
       <rect>
-       <x>1172</x>
-       <y>164</y>
+       <x>970</x>
+       <y>160</y>
        <width>111</width>
        <height>31</height>
       </rect>
@@ -342,13 +430,13 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="LastModDataDisplay">
+    <widget class="QDateEdit" name="RecWithoutResFinalDate">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>220</y>
-       <width>381</width>
-       <height>121</height>
+       <x>1160</x>
+       <y>350</y>
+       <width>112</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -357,20 +445,35 @@
        <pointsize>12</pointsize>
       </font>
      </property>
-     <property name="text">
-      <string/>
+     <property name="acceptDrops">
+      <bool>false</bool>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UserPassChangeDisplay">
+    <widget class="QDateEdit" name="RecWithoutResInitialDate">
      <property name="geometry">
       <rect>
-       <x>420</x>
-       <y>530</y>
-       <width>381</width>
-       <height>121</height>
+       <x>970</x>
+       <y>350</y>
+       <width>111</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -379,40 +482,33 @@
        <pointsize>12</pointsize>
       </font>
      </property>
-     <property name="text">
-      <string/>
+     <property name="acceptDrops">
+      <bool>false</bool>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     <property name="autoFillBackground">
+      <bool>false</bool>
      </property>
-    </widget>
-    <widget class="QLabel" name="UserPassByDateDisplay">
-     <property name="geometry">
-      <rect>
-       <x>905</x>
-       <y>220</y>
-       <width>381</width>
-       <height>77</height>
-      </rect>
+     <property name="wrapping">
+      <bool>false</bool>
      </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
+     <property name="frame">
+      <bool>false</bool>
      </property>
-     <property name="text">
-      <string/>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
      </property>
-     <property name="alignment">
-      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PassChangeButton">
+    <widget class="QPushButton" name="AvgResolutRateButton">
      <property name="geometry">
       <rect>
-       <x>539</x>
-       <y>694</y>
+       <x>894</x>
+       <y>262</y>
        <width>127</width>
        <height>33</height>
       </rect>
@@ -424,146 +520,12 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UserModByDateButton">
-     <property name="geometry">
-      <rect>
-       <x>1029</x>
-       <y>315</y>
-       <width>127</width>
-       <height>33</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="SecondSpaceID">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>973</x>
-       <y>514</y>
-       <width>103</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="ThirdSpaceID">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>1103</x>
-       <y>515</y>
-       <width>103</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="FirstSpaceID">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>905</x>
-       <y>514</y>
-       <width>41</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="UserUnmodPassButton">
-     <property name="geometry">
-      <rect>
-       <x>1031</x>
-       <y>719</y>
-       <width>127</width>
-       <height>33</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="UserUnmodPassDisplay">
+    <widget class="QLabel" name="RecordsWithoutResDisplay">
      <property name="geometry">
       <rect>
        <x>910</x>
-       <y>570</y>
-       <width>391</width>
+       <y>410</y>
+       <width>381</width>
        <height>121</height>
       </rect>
      </property>
@@ -573,6 +535,9 @@
        <pointsize>12</pointsize>
       </font>
      </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
      <property name="text">
       <string/>
      </property>
@@ -580,14 +545,261 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="NameInput">
+    <widget class="QLabel" name="AverageResolutionDisplay">
+     <property name="geometry">
+      <rect>
+       <x>900</x>
+       <y>210</y>
+       <width>381</width>
+       <height>28</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="UserSamePassDisplay">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>340</y>
+       <width>381</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="RecentRecordsDisplay">
+     <property name="geometry">
+      <rect>
+       <x>430</x>
+       <y>560</y>
+       <width>381</width>
+       <height>121</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="RecByDayInitialDate">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>150</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QDateEdit" name="RecByDayFinalDate">
+     <property name="geometry">
+      <rect>
+       <x>620</x>
+       <y>150</y>
+       <width>111</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="acceptDrops">
+      <bool>false</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="wrapping">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="buttonSymbols">
+      <enum>QAbstractSpinBox::UpDownArrows</enum>
+     </property>
+     <property name="showGroupSeparator" stdset="0">
+      <bool>false</bool>
+     </property>
+     <property name="calendarPopup">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="RecordIDInput">
      <property name="enabled">
       <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
-       <x>907</x>
-       <y>398</y>
+       <x>650</x>
+       <y>700</y>
+       <width>33</width>
+       <height>24</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="acceptDrops">
+      <bool>true</bool>
+     </property>
+     <property name="autoFillBackground">
+      <bool>false</bool>
+     </property>
+     <property name="frame">
+      <bool>false</bool>
+     </property>
+     <property name="clearButtonEnabled">
+      <bool>false</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AvgResolutRateButton_2">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>480</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="RecentRecordButton">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>696</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="RecWithoutResButton">
+     <property name="geometry">
+      <rect>
+       <x>895</x>
+       <y>551</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DeleteRecordButton">
+     <property name="geometry">
+      <rect>
+       <x>693</x>
+       <y>696</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="CrimeTypeInput">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>423</x>
+       <y>196</y>
        <width>141</width>
        <height>21</height>
       </rect>
@@ -614,82 +826,14 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="FirstLastNameInput">
+    <widget class="QLineEdit" name="RecordsByDatePlaceInput">
      <property name="enabled">
       <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
-       <x>907</x>
-       <y>437</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="SecondLastNameInput">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>906</x>
-       <y>478</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="UsernameInput">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>1161</x>
-       <y>396</y>
+       <x>424</x>
+       <y>293</y>
        <width>141</width>
        <height>21</height>
       </rect>
@@ -723,7 +867,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1530</width>
+     <width>1526</width>
      <height>21</height>
     </rect>
    </property>

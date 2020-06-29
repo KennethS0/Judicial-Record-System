@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1494</width>
-    <height>845</height>
+    <width>1517</width>
+    <height>881</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -20,7 +20,7 @@
       <x>0</x>
       <y>0</y>
       <width>1531</width>
-      <height>811</height>
+      <height>851</height>
      </rect>
     </property>
     <property name="frameShape">
@@ -29,13 +29,13 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgrounLabel">
+    <widget class="QLabel" name="BackgroundLabel">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>1491</width>
-       <height>811</height>
+       <width>1511</width>
+       <height>841</height>
       </rect>
      </property>
      <property name="text">
@@ -48,11 +48,11 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataButton">
+    <widget class="QPushButton" name="HomeButton">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>110</y>
+       <y>60</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -64,27 +64,11 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecordsButton">
+    <widget class="QPushButton" name="CatalogButton">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>380</y>
-       <width>241</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="StatisticsButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>440</y>
+       <y>340</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -100,7 +84,23 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>750</y>
+       <y>780</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DataButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>120</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -115,8 +115,8 @@
     <widget class="QLabel" name="UsernameLabel">
      <property name="geometry">
       <rect>
-       <x>1363</x>
-       <y>18</y>
+       <x>1384</x>
+       <y>19</y>
        <width>81</width>
        <height>21</height>
       </rect>
@@ -140,70 +140,6 @@
       <string>Username</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="HomeButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>60</y>
-       <width>241</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="AuditLogButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>270</y>
-       <width>241</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="CatalogButton">
-     <property name="geometry">
-      <rect>
-       <x>0</x>
-       <y>330</y>
-       <width>241</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="SubmitButton">
-     <property name="geometry">
-      <rect>
-       <x>1254</x>
-       <y>678</y>
-       <width>127</width>
-       <height>33</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
     <widget class="QPushButton" name="UserBanButton">
      <property name="geometry">
       <rect>
@@ -220,11 +156,11 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PersonRegisterbutton">
+    <widget class="QPushButton" name="AuditLogButton">
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>220</y>
+       <y>290</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -236,16 +172,61 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="NameInput">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
+    <widget class="QPushButton" name="PersonRegisterbutton">
      <property name="geometry">
       <rect>
-       <x>392</x>
-       <y>158</y>
-       <width>137</width>
-       <height>20</height>
+       <x>0</x>
+       <y>230</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="StatisticsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>450</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="RecordsButton">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>400</y>
+       <width>241</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="AddCatalTableChoice">
+     <property name="geometry">
+      <rect>
+       <x>400</x>
+       <y>163</y>
+       <width>131</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -254,32 +235,14 @@
        <pointsize>12</pointsize>
       </font>
      </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
     </widget>
-    <widget class="QLineEdit" name="FirstLastNameInput">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
+    <widget class="QComboBox" name="AddCatalogCurrentChoice">
      <property name="geometry">
       <rect>
-       <x>393</x>
-       <y>197</y>
-       <width>137</width>
-       <height>20</height>
+       <x>643</x>
+       <y>162</y>
+       <width>121</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -288,32 +251,177 @@
        <pointsize>12</pointsize>
       </font>
      </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
+    </widget>
+    <widget class="QComboBox" name="AddCatalTableChoice_2">
+     <property name="geometry">
+      <rect>
+       <x>928</x>
+       <y>160</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
      </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UsernameInput">
-     <property name="enabled">
+    <widget class="QComboBox" name="AddCatalogCurrentChoice_2">
+     <property name="geometry">
+      <rect>
+       <x>1173</x>
+       <y>160</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="AddCatalogButton">
+     <property name="geometry">
+      <rect>
+       <x>357</x>
+       <y>208</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
       <bool>true</bool>
      </property>
+    </widget>
+    <widget class="QPushButton" name="UpdateCatalogButton">
+     <property name="geometry">
+      <rect>
+       <x>923</x>
+       <y>238</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="UnableCatalogButton">
+     <property name="geometry">
+      <rect>
+       <x>923</x>
+       <y>420</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="DeleteCatalogButton">
+     <property name="geometry">
+      <rect>
+       <x>394</x>
+       <y>420</y>
+       <width>127</width>
+       <height>33</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="flat">
+      <bool>true</bool>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="DeleteCatalTableChoice">
+     <property name="geometry">
+      <rect>
+       <x>396</x>
+       <y>380</y>
+       <width>131</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="DeleteCatalCurrentChoice">
      <property name="geometry">
       <rect>
        <x>640</x>
-       <y>160</y>
-       <width>137</width>
-       <height>20</height>
+       <y>380</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="UnableCatalTableChoice">
+     <property name="geometry">
+      <rect>
+       <x>925</x>
+       <y>380</y>
+       <width>141</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QComboBox" name="UnableCatalCurrentChoice">
+     <property name="geometry">
+      <rect>
+       <x>1170</x>
+       <y>380</y>
+       <width>121</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Source Sans Pro</family>
+       <pointsize>12</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="UpdateCatalDataInput">
+     <property name="enabled">
+      <bool>true</bool>
+     </property>
+     <property name="geometry">
+      <rect>
+       <x>928</x>
+       <y>200</y>
+       <width>141</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -338,149 +446,13 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="SeconLastNameInput">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
+    <widget class="QLabel" name="UpdateCatalDisplay">
      <property name="geometry">
       <rect>
-       <x>393</x>
-       <y>233</y>
-       <width>137</width>
-       <height>20</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="FirstSpaceID">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>392</x>
-       <y>270</y>
-       <width>41</width>
+       <x>1150</x>
+       <y>240</y>
+       <width>141</width>
        <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="ThirdSpaceID">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>584</x>
-       <y>270</y>
-       <width>103</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLineEdit" name="SecondSpaceID">
-     <property name="enabled">
-      <bool>true</bool>
-     </property>
-     <property name="geometry">
-      <rect>
-       <x>457</x>
-       <y>270</y>
-       <width>103</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="cursor">
-      <cursorShape>IBeamCursor</cursorShape>
-     </property>
-     <property name="acceptDrops">
-      <bool>true</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="clearButtonEnabled">
-      <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QLabel" name="UserSamePassDisplay">
-     <property name="geometry">
-      <rect>
-       <x>395</x>
-       <y>323</y>
-       <width>381</width>
-       <height>121</height>
       </rect>
      </property>
      <property name="font">
@@ -499,13 +471,13 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="UserSamePassDisplay_2">
+    <widget class="QLabel" name="UnableCatalDisplay">
      <property name="geometry">
       <rect>
-       <x>395</x>
-       <y>495</y>
-       <width>381</width>
-       <height>121</height>
+       <x>1154</x>
+       <y>422</y>
+       <width>141</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -524,13 +496,13 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="RecordsWithoutResDisplay">
+    <widget class="QLabel" name="DeleteCatalDisplay">
      <property name="geometry">
       <rect>
-       <x>877</x>
-       <y>323</y>
-       <width>381</width>
-       <height>121</height>
+       <x>620</x>
+       <y>420</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -549,13 +521,13 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="AverageResolutionDisplay">
+    <widget class="QLabel" name="AddCatalDisplay">
      <property name="geometry">
       <rect>
-       <x>877</x>
-       <y>203</y>
-       <width>381</width>
-       <height>28</height>
+       <x>620</x>
+       <y>240</y>
+       <width>151</width>
+       <height>31</height>
       </rect>
      </property>
      <property name="font">
@@ -574,50 +546,16 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QDateEdit" name="RecWithoutResInitialDate">
-     <property name="geometry">
-      <rect>
-       <x>950</x>
-       <y>274</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="wrapping">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::UpDownArrows</enum>
-     </property>
-     <property name="showGroupSeparator" stdset="0">
-      <bool>false</bool>
-     </property>
-     <property name="calendarPopup">
+    <widget class="QLineEdit" name="AddCatalogInput">
+     <property name="enabled">
       <bool>true</bool>
      </property>
-    </widget>
-    <widget class="QDateEdit" name="RecWithoutResFinalDate">
      <property name="geometry">
       <rect>
-       <x>1140</x>
-       <y>272</y>
-       <width>111</width>
-       <height>31</height>
+       <x>400</x>
+       <y>200</y>
+       <width>141</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -626,99 +564,35 @@
        <pointsize>12</pointsize>
       </font>
      </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
      <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="wrapping">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::UpDownArrows</enum>
-     </property>
-     <property name="showGroupSeparator" stdset="0">
-      <bool>false</bool>
-     </property>
-     <property name="calendarPopup">
       <bool>true</bool>
      </property>
-    </widget>
-    <widget class="QDateEdit" name="AverageResInitialDate">
-     <property name="geometry">
-      <rect>
-       <x>950</x>
-       <y>158</y>
-       <width>111</width>
-       <height>31</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
      <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="wrapping">
       <bool>false</bool>
      </property>
      <property name="frame">
       <bool>false</bool>
      </property>
-     <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::UpDownArrows</enum>
-     </property>
-     <property name="showGroupSeparator" stdset="0">
+     <property name="clearButtonEnabled">
       <bool>false</bool>
-     </property>
-     <property name="calendarPopup">
-      <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="AverageResFinalDate">
+    <widget class="QPushButton" name="AddCatalogButton_2">
      <property name="geometry">
       <rect>
-       <x>1140</x>
-       <y>158</y>
-       <width>111</width>
-       <height>31</height>
+       <x>394</x>
+       <y>238</y>
+       <width>127</width>
+       <height>33</height>
       </rect>
      </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
+     <property name="text">
+      <string/>
      </property>
-     <property name="acceptDrops">
-      <bool>false</bool>
-     </property>
-     <property name="autoFillBackground">
-      <bool>false</bool>
-     </property>
-     <property name="wrapping">
-      <bool>false</bool>
-     </property>
-     <property name="frame">
-      <bool>false</bool>
-     </property>
-     <property name="buttonSymbols">
-      <enum>QAbstractSpinBox::UpDownArrows</enum>
-     </property>
-     <property name="showGroupSeparator" stdset="0">
-      <bool>false</bool>
-     </property>
-     <property name="calendarPopup">
+     <property name="flat">
       <bool>true</bool>
      </property>
     </widget>
@@ -729,7 +603,7 @@
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1494</width>
+     <width>1517</width>
      <height>21</height>
     </rect>
    </property>
