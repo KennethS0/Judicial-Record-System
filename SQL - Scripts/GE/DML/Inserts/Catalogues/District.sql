@@ -417,7 +417,7 @@ INSERT ALL
    INTO district(id, canton_id, name) VALUES (50501, 505, 'FILADELFIA')
    INTO district(id, canton_id, name) VALUES (21002, 210, 'FLORENCIA')
    INTO district(id, canton_id, name) VALUES (21009, 210, 'LA PALMERA')
-   INTO district(id, canton_id, name) VALUES (50504, 505, 'BELï¿½N')
+   INTO district(id, canton_id, name) VALUES (50504, 505, 'BEL�N')
    INTO district(id, canton_id, name) VALUES (50304, 503, 'TEMPATE')
    INTO district(id, canton_id, name) VALUES (50803, 508, 'TRONADORA')
    INTO district(id, canton_id, name) VALUES (21007, 210, 'LA FORTUNA')

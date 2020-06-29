@@ -6,7 +6,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
     BEGIN
      OPEN pRecordset FOR   
         -- Shows all the accounts that have changed their password in a range of dates.
-        SELECT UNIQUE(ua.username) FROM passwordhistory ph
+        SELECT UNIQUE(ua.username) FROM ad.passwordhistory ph
 
         -- Joins with USERACCOUNT (ua) to get the id inside of PASSWORDHISTORY
         INNER JOIN useraccount ua
@@ -43,7 +43,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
     BEGIN
         OPEN pRecordSet FOR
             -- Shows all the unmodified passwords from the past 10 days.
-            SELECT UNIQUE(ua.username) FROM passwordhistory ph
+            SELECT UNIQUE(ua.username) FROM ad.passwordhistory ph
             
             -- Joins with USERACCOUNT(ua) to get the corresponding id's
             INNER JOIN useraccount ua

@@ -1,11 +1,11 @@
 INSERT ALL
-    INTO type_of_sentence (id, type) VALUES (1, 'PRISIÓN')
-    INTO type_of_sentence (id, type) VALUES (2, 'EXTRAÑAMIENTO')
-    INTO type_of_sentence (id, type) VALUES (3, 'MULTA')
-    INTO type_of_sentence (id, type) VALUES (4, 'INHABILITACIÓN')
-    INTO type_of_sentence (id, type) VALUES (5, 'INHABILITACIÓN ESPECIAL')
-    INTO type_of_sentence (id, type) VALUES (6, 'PRESTACIÓN DE SERVICIOS DE UTILIDAD PÚBLICA')
-    INTO type_of_sentence (id, type) VALUES (7, 'ARRESTO DOMICILIARIO')
+    INTO type_of_sentence (type) VALUES ('PRISON')
+    INTO type_of_sentence (type) VALUES ('EXTRADITION')
+    INTO type_of_sentence (type) VALUES ('PENALTY FEE')
+    INTO type_of_sentence (type) VALUES ('DISQUALIFICATION')
+    INTO type_of_sentence (type) VALUES ('SPECIAL DISQUALIFICATION')
+    INTO type_of_sentence (type) VALUES ('COMMUNITY SERVICE')
+    INTO type_of_sentence (type) VALUES ('HOUSE ARREST')
 SELECT * FROM DUAL;
     
     

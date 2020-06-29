@@ -7,6 +7,6 @@ CREATE TABLE person_sues_person
     prosecutor    NUMBER(10) CONSTRAINT sue_prosecutor_nn NOT NULL,
     
     -- ATTRIBUTES
-    date_submited DATE CONSTRAINT sue_date_nn NOT NULL,
+    date_submitted DATE CONSTRAINT sue_date_nn NOT NULL,
     reason        VARCHAR2(300) CONSTRAINT sue_reason_nn NOT NULL
 );

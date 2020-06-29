@@ -1,1 +1,1 @@
-GRANT INSERT, UPDATE ON passwordhistory TO ge;
+GRANT SELECT, INSERT, UPDATE ON passwordhistory TO ge;
