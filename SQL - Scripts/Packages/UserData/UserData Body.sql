@@ -8,74 +8,32 @@ CREATE OR REPLACE PACKAGE BODY userdata AS
     BEGIN
         SELECT username INTO vUsername FROM useraccount
         WHERE id = pId;
+        
+        RETURN (vUsername);
     END;
 
     -- GETS THE PASSWORD FROM A USER
     FUNCTION getPassword (pId NUMBER)
     RETURN VARCHAR2
     IS 
-    vPassword VARCHAR2(64);
+    vPassword VARCHAR2(500);
     BEGIN
         SELECT password INTO vPassword FROM useraccount
         WHERE id = pId;
-    END;
-    
-    -- CHANGES THE PASSWORD OF A USER, INTENDED TO BE USED BY A USER
-    PROCEDURE changePasswordAsUser (pUsername VARCHAR2, pOldPassword VARCHAR2, pNewPassword VARCHAR2) 
-    IS
-        oldPassword VARCHAR2(64);
-    BEGIN
         
-        -- QUERY TO SELECT THE PASSWORD OF THE USER
-        SELECT password INTO oldPassword FROM useraccount
-        WHERE username = pUsername;
-    
-    
-        -- EITHER UPDATES THE PASSWORD OR SHOWS AN ERROR MESSAGE
-        IF oldPassword = pOldPassword THEN
-            UPDATE useraccount
-            SET password = pNewPassword
-            WHERE username = pUsername AND password = pOldPassword;
-            COMMIT;
-        ELSE 
-            dbms_output.put_line('INVALID USERNAME OR PASSWORD');
-        END IF;
+        RETURN (vPassword);
     END;
     
-    
-    -- CHANGES THE PASSWORD OF A USER, 
-    -- INTENDED TO BE USED BY AN ADMINISTRATOR
-    -- TO CHANGE ANY PASSWORD
-    PROCEDURE changePasswordAsAdmin (pUsername VARCHAR2, pNewPassword VARCHAR2) 
-    IS
-    BEGIN
-        UPDATE useraccount
-        SET password = pNewPassword
-        WHERE username = pUsername;
-        
-        COMMIT;
-    END;
-    
-    
-    -- VERIFIES IF THE USER IS ACTUALLY THE ONE USING THE ACCOUNT
-    -- INTENDED TO BE USED WHEN MANAGING INFORMATION (PRIVACY)
-    FUNCTION verifyUser (pId NUMBER, pPassword VARCHAR2)
+     -- GETS THE ID OF A SPECIFIC USER
+    FUNCTION getUserId (pUsername VARCHAR2)
     RETURN NUMBER
-    IS 
-        verified NUMBER(1) := 0;
-        passwordCopy VARCHAR2(64);
+    IS
+    vId NUMBER(6);
     BEGIN
-        -- RETURNS 1 (TRUE) IF THE PASSWORD MATCHES THE ONE THAT THE USER HAS.
-        -- RETURNS 0 (FALSE) IF IT DOESNT
-        SELECT password INTO passwordCopy FROM useraccount
-        WHERE id = pId;
-            
-            
-        IF passwordCopy = pPassword THEN
-            verified := 1;
-        END IF;
+        SELECT id INTO vId FROM useraccount
+        WHERE username = pUsername;
         
-        RETURN (verified);
+        RETURN (vId);
     END;
     
     
