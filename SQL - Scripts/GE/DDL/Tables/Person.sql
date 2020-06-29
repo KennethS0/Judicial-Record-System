@@ -6,7 +6,7 @@ CREATE TABLE person
     -- FOREIGN KEY
     Gender_id       NUMBER(1) CONSTRAINT person_gender_nn NOT NULL,
     Address_id      NUMBER(6) CONSTRAINT person_address_nn NOT NULL,
-    User_id         NUMBER(6) CONSTRAINT person_user_nn NOT NULL,
+    User_id         NUMBER(6),
     
     -- ATTRIBUTES
     institution     VARCHAR2(20), -- NULLABLE

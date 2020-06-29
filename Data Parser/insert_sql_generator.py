@@ -1,5 +1,8 @@
 # DATA PARSER, GENERATES .sql FILES FROM THE INFORMATION IN CSV FILES
 import csv
+import datetime
+import random
+
 
 # Reads a .csv file and returns its reader
 def read_csv(pFile):
@@ -105,10 +108,10 @@ if __name__ == '__main__':
 
     generateInsert('Office.sql', 'office', officeColumns, officeRows)
 
-    # === COMMUNITIES ===
+    #=== COMMUNITIES ===
     commColumns = ['id', 'district_id', 'name']
     commRows = []
-    data = read_csv('.//CSV Files//barrios.csv')
+    data = read_csv('.//CSV Files//Geographic//barrios.csv')
 
     for row in data:
         # Generate correct ID's
@@ -123,3 +126,48 @@ if __name__ == '__main__':
 
 
     generateInsert('Community.sql', 'community', commColumns, commRows)
+
+    # === TEST DATA: Addresses ===
+    addressColumns = ['community_id', 'description_']
+    addressRows = []
+    data = read_csv('D://GitHub//Judicial-Record-System//Data Parser//CSV Files//Geographic//address.csv')
+
+    for row in data:
+        addressRows.append([
+            row[0],
+            "'{}'".format(row[1]).upper()
+        ])
+
+    generateInsert('TEST Addresses.sql', 'address', addressColumns, addressRows)
+
+    # === TEST DATA: People ===
+    personColumns = ['citizenship_id', 'gender_id', 'address_id', 'user_id', 'first_name',
+                    'middle_name', 'last_name', 'secondlast_name', 'birth_date']
+    personRows = []
+    data = read_csv('D://GitHub//Judicial-Record-System//Data Parser//CSV Files//Demographic//People.csv')
+
+    consec = 1
+    for row in data:
+        
+        start_date = datetime.date(1930, 1, 1)
+        end_date = datetime.date.today()
+
+        time_between_dates = end_date - start_date
+        days_between_dates = time_between_dates.days
+        random_number_of_days = random.randrange(days_between_dates)
+
+        random_date = start_date + datetime.timedelta(days=random_number_of_days)
+
+        personRows.append([
+            str(row[0]),
+            str(row[5]),
+            str(consec),
+            str(consec),
+            "'{}'".format(row[1]),
+            "'{}'".format(row[2]),
+            "'{}'".format(row[3]),
+            "'{}'".format(row[4]),
+            str(random_date)
+        ])
+        consec += 1
+    generateInsert('TEST People.sql', 'person', personColumns, personRows)
