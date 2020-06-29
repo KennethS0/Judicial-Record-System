@@ -23,3 +23,4 @@ Set Up:
 4) Connect to GE in SQL Developer and open 'SQL-SCRIPTS/GE':
    - DML/Triggers/           (Run 'Password Hisotry Updated.sql').
    - DML/Packages/           (Run every file from every subdirectory).
+   - DML/Inserts/Catalogues  (Run every file).
