@@ -3,6 +3,7 @@ import datetime
 
 import Application.Model.DatabaseConnection.Database as dbo
 from Application.Model.DatabaseConnection import Instructions as I
+import Application.Controller.LoginController
 
 
 if __name__ == '__main__':

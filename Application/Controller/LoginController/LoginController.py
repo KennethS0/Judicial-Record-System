@@ -1,5 +1,3 @@
-import Application.Model.DatabaseConnection.Database as dbo
-
 class LogInController:
 
     def __init__(self, pDatabase, pView):
