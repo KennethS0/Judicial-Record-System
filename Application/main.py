@@ -8,9 +8,4 @@ import Application.Controller.LoginController.LoginController as lc
 
 if __name__ == '__main__':
 
-    
-    
     lc = lc.LogInController()
-    
-
-    # db.disconnect()

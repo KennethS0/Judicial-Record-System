@@ -11,40 +11,75 @@ from Application.Model.DatabaseConnection.Database import Database
 from Application.Views.LoginView.login import Ui_MainWindow
 
 from PyQt5 import QtCore, QtGui, QtWidgets
+from PyQt5.QtWidgets import QMessageBox
 
 class LogInController:
+
+    GENERAL_CONNECTION = 'ge/ge@//localhost:1521/JUDICIALRECORDSYSTEM'
 
     def __init__(self):
         '''
         CONSTRUCTOR METHOD
         '''
         # Sets database and view
-        self.model = Database('ge/ge@//localhost:1521/JUDICIALRECORDSYSTEM')
+        self.model = Database.getInstance()
         self.view = Ui_MainWindow()
 
         # Loads application
-        app = QtWidgets.QApplication(sys.argv)
-        MainWindow = QtWidgets.QMainWindow()
-        self.view.setupUi(MainWindow)
-
-        # Gets the information passed
-
+        self.app = QtWidgets.QApplication(sys.argv)
+        self.MainWindow = QtWidgets.QMainWindow()
+        self.view.setupUi(self.MainWindow)
 
         # Sets event
-        self.view.LoginButton_Login.clicked.connect(self.btn_clicked)
+        self.view.LoginButton_Login.clicked.connect(self.login_clicked)
         
 
-        self.loadUi(MainWindow, app)
+        self.loadUi()
 
        
 
-    def loadUi(self, pMainWindow, pApp):
+    def loadUi(self):
         '''
         Renders the application for the user
         '''
-        pMainWindow.show()
-        sys.exit(pApp.exec_())
+        self.MainWindow.show()
+        sys.exit(self.app.exec_())
+        sys.exit(self.model.disconnect())
 
 
-    def btn_clicked(self):
-        print('clicked!')
+    def login_clicked(self, pMainWindow):
+        '''
+        Event for log in
+        '''
+        username = self.view.UserName_Login.text()
+        password = self.view.Password_Login.text()
+
+        try:
+            # Connects to the database to log the user
+            self.model.connect(self.GENERAL_CONNECTION)
+            self.model.logUser(username, password)
+            
+            # Invokes the new window
+            if self.model.getUser().isAdmin == True:
+                pass
+            else:
+                pass
+
+        except:
+            self.view.UserName_Login.setText('')
+            self.view.Password_Login.setText('')
+            self.show_error('Invalid Credentials', 'Please enter a valid username or password.')
+
+
+    def show_error(self, pTitle, pMessage):
+        '''
+        Shows a pop up error in case the connection is invalid
+        '''
+        msg = QMessageBox()
+        msg.setWindowTitle(pTitle)
+        msg.setText(pMessage)
+
+        msg.setIcon(QMessageBox.Critical)
+        msg.setStandardButtons(QMessageBox.Retry)
+
+        msg.exec_()
