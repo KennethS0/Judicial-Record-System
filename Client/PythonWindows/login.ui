@@ -140,24 +140,8 @@
     <widget class="QPushButton" name="LoginButton_Login">
      <property name="geometry">
       <rect>
-       <x>722</x>
-       <y>428</y>
-       <width>141</width>
-       <height>41</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="SignUpButton_Login">
-     <property name="geometry">
-      <rect>
-       <x>879</x>
-       <y>429</y>
+       <x>806</x>
+       <y>430</y>
        <width>141</width>
        <height>41</height>
       </rect>
@@ -173,7 +157,6 @@
     <zorder>UserName_Login</zorder>
     <zorder>Password_Login</zorder>
     <zorder>LoginButton_Login</zorder>
-    <zorder>SignUpButton_Login</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">
