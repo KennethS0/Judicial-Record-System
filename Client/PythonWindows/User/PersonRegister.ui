@@ -14,7 +14,7 @@
    <string>PersonRegister</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="BackgroundLabel">
+   <widget class="QFrame" name="BackgroundFrame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgroundLabel_2">
+    <widget class="QLabel" name="BackgroundLabel">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -52,7 +52,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>790</y>
+       <y>780</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -100,7 +100,7 @@
      <property name="geometry">
       <rect>
        <x>0</x>
-       <y>70</y>
+       <y>60</y>
        <width>241</width>
        <height>51</height>
       </rect>
@@ -175,8 +175,8 @@
     <widget class="QDateEdit" name="InitialSentenceDate">
      <property name="geometry">
       <rect>
-       <x>880</x>
-       <y>589</y>
+       <x>894</x>
+       <y>595</y>
        <width>381</width>
        <height>31</height>
       </rect>
@@ -215,8 +215,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>979</x>
-       <y>142</y>
+       <x>989</x>
+       <y>146</y>
        <width>101</width>
        <height>30</height>
       </rect>
@@ -246,8 +246,8 @@
     <widget class="QComboBox" name="RecordType">
      <property name="geometry">
       <rect>
-       <x>883</x>
-       <y>218</y>
+       <x>894</x>
+       <y>223</y>
        <width>211</width>
        <height>32</height>
       </rect>
@@ -262,8 +262,8 @@
     <widget class="QComboBox" name="Genre">
      <property name="geometry">
       <rect>
-       <x>406</x>
-       <y>522</y>
+       <x>420</x>
+       <y>528</y>
        <width>191</width>
        <height>33</height>
       </rect>
@@ -281,8 +281,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>411</x>
-       <y>370</y>
+       <x>423</x>
+       <y>376</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -315,8 +315,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>476</x>
-       <y>142</y>
+       <x>488</x>
+       <y>147</y>
        <width>103</width>
        <height>31</height>
       </rect>
@@ -349,8 +349,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>676</y>
+       <x>424</x>
+       <y>682</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -380,8 +380,8 @@
     <widget class="QDateEdit" name="Birthdate">
      <property name="geometry">
       <rect>
-       <x>405</x>
-       <y>591</y>
+       <x>419</x>
+       <y>597</y>
        <width>381</width>
        <height>31</height>
       </rect>
@@ -417,8 +417,8 @@
     <widget class="QPushButton" name="SubmitButton">
      <property name="geometry">
       <rect>
-       <x>1282</x>
-       <y>704</y>
+       <x>1293</x>
+       <y>710</y>
        <width>127</width>
        <height>33</height>
       </rect>
@@ -436,8 +436,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>409</x>
-       <y>142</y>
+       <x>420</x>
+       <y>148</y>
        <width>41</width>
        <height>31</height>
       </rect>
@@ -470,8 +470,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>411</x>
-       <y>293</y>
+       <x>423</x>
+       <y>299</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -504,8 +504,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>1102</x>
-       <y>142</y>
+       <x>1114</x>
+       <y>146</y>
        <width>71</width>
        <height>31</height>
       </rect>
@@ -538,8 +538,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>885</x>
-       <y>142</y>
+       <x>896</x>
+       <y>147</y>
        <width>70</width>
        <height>30</height>
       </rect>
@@ -572,8 +572,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>604</x>
-       <y>142</y>
+       <x>616</x>
+       <y>147</y>
        <width>103</width>
        <height>31</height>
       </rect>
@@ -606,8 +606,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>1194</x>
-       <y>141</y>
+       <x>1205</x>
+       <y>146</y>
        <width>71</width>
        <height>31</height>
       </rect>
@@ -637,8 +637,8 @@
     <widget class="QComboBox" name="RecordResolution">
      <property name="geometry">
       <rect>
-       <x>883</x>
-       <y>522</y>
+       <x>897</x>
+       <y>528</y>
        <width>191</width>
        <height>33</height>
       </rect>
@@ -656,8 +656,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>410</x>
-       <y>218</y>
+       <x>422</x>
+       <y>224</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -687,8 +687,8 @@
     <widget class="QDateEdit" name="CrimeDate">
      <property name="geometry">
       <rect>
-       <x>880</x>
-       <y>359</y>
+       <x>893</x>
+       <y>362</y>
        <width>381</width>
        <height>31</height>
       </rect>
@@ -727,8 +727,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>885</x>
-       <y>294</y>
+       <x>898</x>
+       <y>300</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -761,8 +761,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>412</x>
-       <y>446</y>
+       <x>424</x>
+       <y>452</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -795,8 +795,8 @@
      </property>
      <property name="geometry">
       <rect>
-       <x>888</x>
-       <y>447</y>
+       <x>902</x>
+       <y>453</y>
        <width>371</width>
        <height>31</height>
       </rect>
@@ -826,8 +826,8 @@
     <widget class="QDateEdit" name="FinalSentenceDate">
      <property name="geometry">
       <rect>
-       <x>880</x>
-       <y>653</y>
+       <x>894</x>
+       <y>659</y>
        <width>381</width>
        <height>31</height>
       </rect>

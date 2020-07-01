@@ -14,7 +14,7 @@
    <string>Menu</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="BanFrame">
+   <widget class="QFrame" name="BanUserFrame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -32,7 +32,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="UsernameInput">
+    <widget class="QLineEdit" name="UsernameInput_BanUser">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -66,7 +66,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="ReasonInput">
+    <widget class="QLineEdit" name="ReasonInput_BanUser">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -100,7 +100,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="HomeButton">
+    <widget class="QPushButton" name="HomeButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -116,7 +116,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataButton">
+    <widget class="QPushButton" name="DataButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -132,7 +132,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UserBanButton">
+    <widget class="QPushButton" name="UserBanButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -148,7 +148,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PersonRegisterbutton">
+    <widget class="QPushButton" name="PersonRegisterButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -164,7 +164,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AuditLogButton">
+    <widget class="QPushButton" name="AuditLogButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -180,7 +180,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="CatalogButton">
+    <widget class="QPushButton" name="CatalogButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -196,7 +196,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecordsButton">
+    <widget class="QPushButton" name="RecordsButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -212,7 +212,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="StatisticsButton">
+    <widget class="QPushButton" name="StatisticsButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -228,7 +228,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="LogOutButton">
+    <widget class="QPushButton" name="LogOutButton_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -244,7 +244,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="InitialDate">
+    <widget class="QDateEdit" name="InitialDate_BanUser">
      <property name="geometry">
       <rect>
        <x>410</x>
@@ -281,7 +281,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="FinalDate">
+    <widget class="QDateEdit" name="FinalDate_BanUser">
      <property name="geometry">
       <rect>
        <x>620</x>
@@ -318,7 +318,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="SubmitButton">
+    <widget class="QPushButton" name="SubmitButton_BanUser">
      <property name="geometry">
       <rect>
        <x>1290</x>
@@ -334,7 +334,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="BanUserBckg">
+    <widget class="QLabel" name="BanUserLabel_BanUser">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -353,7 +353,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UsernameLabel">
+    <widget class="QLabel" name="UsernameLabel_BanUser">
      <property name="geometry">
       <rect>
        <x>1400</x>
@@ -381,7 +381,7 @@
       <string>Username</string>
      </property>
     </widget>
-    <widget class="QCheckBox" name="checkBox">
+    <widget class="QCheckBox" name="PermanentBanCheck_BanUser">
      <property name="geometry">
       <rect>
        <x>950</x>
@@ -403,23 +403,23 @@
       </size>
      </property>
     </widget>
-    <zorder>BanUserBckg</zorder>
-    <zorder>UsernameInput</zorder>
-    <zorder>ReasonInput</zorder>
-    <zorder>HomeButton</zorder>
-    <zorder>DataButton</zorder>
-    <zorder>UserBanButton</zorder>
-    <zorder>PersonRegisterbutton</zorder>
-    <zorder>AuditLogButton</zorder>
-    <zorder>CatalogButton</zorder>
-    <zorder>RecordsButton</zorder>
-    <zorder>StatisticsButton</zorder>
-    <zorder>LogOutButton</zorder>
-    <zorder>InitialDate</zorder>
-    <zorder>FinalDate</zorder>
-    <zorder>SubmitButton</zorder>
-    <zorder>UsernameLabel</zorder>
-    <zorder>checkBox</zorder>
+    <zorder>BanUserLabel_BanUser</zorder>
+    <zorder>UsernameInput_BanUser</zorder>
+    <zorder>ReasonInput_BanUser</zorder>
+    <zorder>HomeButton_BanUser</zorder>
+    <zorder>DataButton_BanUser</zorder>
+    <zorder>UserBanButton_BanUser</zorder>
+    <zorder>PersonRegisterButton_BanUser</zorder>
+    <zorder>AuditLogButton_BanUser</zorder>
+    <zorder>CatalogButton_BanUser</zorder>
+    <zorder>RecordsButton_BanUser</zorder>
+    <zorder>StatisticsButton_BanUser</zorder>
+    <zorder>LogOutButton_BanUser</zorder>
+    <zorder>InitialDate_BanUser</zorder>
+    <zorder>FinalDate_BanUser</zorder>
+    <zorder>SubmitButton_BanUser</zorder>
+    <zorder>UsernameLabel_BanUser</zorder>
+    <zorder>PermanentBanCheck_BanUser</zorder>
    </widget>
   </widget>
   <widget class="QMenuBar" name="menubar">

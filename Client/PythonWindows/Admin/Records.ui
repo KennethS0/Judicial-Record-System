@@ -14,7 +14,7 @@
    <string>Records</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="frame">
+   <widget class="QFrame" name="RecordsFrame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgLabel">
+    <widget class="QLabel" name="BackgroundLabel_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -48,7 +48,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataButton">
+    <widget class="QPushButton" name="DataButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -64,7 +64,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecordsButton">
+    <widget class="QPushButton" name="RecordsButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -80,7 +80,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="StatisticsButton">
+    <widget class="QPushButton" name="StatisticsButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -96,7 +96,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="LogOutButton">
+    <widget class="QPushButton" name="LogOutButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -112,7 +112,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UsernameLabel">
+    <widget class="QLabel" name="UsernameLabel_Records">
      <property name="geometry">
       <rect>
        <x>1390</x>
@@ -140,7 +140,7 @@
       <string>Username</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="HomeButton">
+    <widget class="QPushButton" name="HomeButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -156,7 +156,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AuditLogButton">
+    <widget class="QPushButton" name="AuditLogButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -172,7 +172,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="CatalogButton">
+    <widget class="QPushButton" name="CatalogButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -188,7 +188,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UserBanButton">
+    <widget class="QPushButton" name="UserBanButton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -204,7 +204,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PersonRegisterbutton">
+    <widget class="QPushButton" name="PersonRegisterbutton_Records">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -220,7 +220,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="FourthSpaceRecNum">
+    <widget class="QLineEdit" name="FourthSpaceRecNum_Records">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -254,7 +254,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="FirstSpaceRecordNum">
+    <widget class="QLineEdit" name="FirstSpaceRecordNum_Records">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -288,7 +288,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="SecSpaceRecordNum">
+    <widget class="QLineEdit" name="SecSpaceRecordNum_Records">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -322,7 +322,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="ThirdSpaceRecNum">
+    <widget class="QLineEdit" name="ThirdSpaceRecNum_Records">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -356,7 +356,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="AverageResFinalDate">
+    <widget class="QDateEdit" name="AverageResFinalDate_Records">
      <property name="geometry">
       <rect>
        <x>1160</x>
@@ -393,7 +393,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="AverageResInitialDate">
+    <widget class="QDateEdit" name="AverageResInitialDate_Records">
      <property name="geometry">
       <rect>
        <x>970</x>
@@ -430,7 +430,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="RecWithoutResFinalDate">
+    <widget class="QDateEdit" name="RecWithoutResFinalDate_Records">
      <property name="geometry">
       <rect>
        <x>1160</x>
@@ -467,7 +467,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="RecWithoutResInitialDate">
+    <widget class="QDateEdit" name="RecWithoutResInitialDate_Records">
      <property name="geometry">
       <rect>
        <x>970</x>
@@ -504,7 +504,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AvgResolutRateButton">
+    <widget class="QPushButton" name="AvgResolutRateButton_Records">
      <property name="geometry">
       <rect>
        <x>894</x>
@@ -520,7 +520,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="RecordsWithoutResDisplay">
+    <widget class="QLabel" name="RecordsWithoutResDisplay_Records">
      <property name="geometry">
       <rect>
        <x>910</x>
@@ -545,7 +545,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="AverageResolutionDisplay">
+    <widget class="QLabel" name="AverageResolutionDisplay_Records">
      <property name="geometry">
       <rect>
        <x>900</x>
@@ -570,7 +570,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="UserSamePassDisplay">
+    <widget class="QLabel" name="UserSamePassDisplay_Records">
      <property name="geometry">
       <rect>
        <x>430</x>
@@ -595,7 +595,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="RecentRecordsDisplay">
+    <widget class="QLabel" name="RecentRecordsDisplay_Records">
      <property name="geometry">
       <rect>
        <x>430</x>
@@ -620,7 +620,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QDateEdit" name="RecByDayInitialDate">
+    <widget class="QDateEdit" name="RecByDayInitialDate_Records">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -657,7 +657,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QDateEdit" name="RecByDayFinalDate">
+    <widget class="QDateEdit" name="RecByDayFinalDate_Records">
      <property name="geometry">
       <rect>
        <x>620</x>
@@ -694,7 +694,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="RecordIDInput">
+    <widget class="QLineEdit" name="RecordIDInput_Records">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -728,7 +728,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AvgResolutRateButton_2">
+    <widget class="QPushButton" name="RecByDateSubmitButton_Records">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -744,7 +744,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecentRecordButton">
+    <widget class="QPushButton" name="RecentRecordButton_Records">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -760,7 +760,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecWithoutResButton">
+    <widget class="QPushButton" name="RecWithoutResButton_Records">
      <property name="geometry">
       <rect>
        <x>895</x>
@@ -776,7 +776,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DeleteRecordButton">
+    <widget class="QPushButton" name="DeleteRecordButton_Records">
      <property name="geometry">
       <rect>
        <x>693</x>
@@ -792,7 +792,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QComboBox" name="CrimeType">
+    <widget class="QComboBox" name="CrimeType_Records">
      <property name="geometry">
       <rect>
        <x>420</x>
@@ -808,7 +808,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="PlaceType">
+    <widget class="QComboBox" name="PlaceType_Records">
      <property name="geometry">
       <rect>
        <x>420</x>

@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>1080</width>
-    <height>587</height>
+    <width>1120</width>
+    <height>707</height>
    </rect>
   </property>
   <property name="sizePolicy">
@@ -29,10 +29,10 @@
    <widget class="QFrame" name="frame">
     <property name="geometry">
      <rect>
-      <x>560</x>
+      <x>0</x>
       <y>0</y>
-      <width>521</width>
-      <height>571</height>
+      <width>1131</width>
+      <height>701</height>
      </rect>
     </property>
     <property name="autoFillBackground">
@@ -44,16 +44,16 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLineEdit" name="UsernameInput">
+    <widget class="QLineEdit" name="UserName_Login">
      <property name="enabled">
       <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>165</y>
-       <width>311</width>
-       <height>41</height>
+       <x>789</x>
+       <y>260</y>
+       <width>221</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -78,16 +78,16 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UsernameInput_2">
+    <widget class="QLineEdit" name="Password_Login">
      <property name="enabled">
       <bool>true</bool>
      </property>
      <property name="geometry">
       <rect>
-       <x>140</x>
-       <y>240</y>
-       <width>311</width>
-       <height>41</height>
+       <x>789</x>
+       <y>314</y>
+       <width>221</width>
+       <height>21</height>
       </rect>
      </property>
      <property name="font">
@@ -115,51 +115,35 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UserInputLabel">
+    <widget class="QLabel" name="BackgroundLabel_Login">
      <property name="geometry">
       <rect>
-       <x>-20</x>
+       <x>0</x>
        <y>0</y>
-       <width>551</width>
-       <height>571</height>
+       <width>1161</width>
+       <height>681</height>
       </rect>
      </property>
      <property name="text">
       <string/>
      </property>
-     <property name="pixmap">
-      <pixmap>Images/text.png</pixmap>
-     </property>
-     <property name="alignment">
-      <set>Qt::AlignCenter</set>
-     </property>
-    </widget>
-    <widget class="QLabel" name="Logo">
-     <property name="geometry">
-      <rect>
-       <x>80</x>
-       <y>40</y>
-       <width>391</width>
-       <height>51</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
+     <property name="textFormat">
+      <enum>Qt::PlainText</enum>
      </property>
      <property name="pixmap">
-      <pixmap>Images/Logo.png</pixmap>
+      <pixmap>SignInPage.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="LoginButton">
+    <widget class="QPushButton" name="LoginButton_Login">
      <property name="geometry">
       <rect>
-       <x>54</x>
-       <y>412</y>
-       <width>187</width>
-       <height>53</height>
+       <x>722</x>
+       <y>428</y>
+       <width>141</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -169,13 +153,13 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="SignupButton">
+    <widget class="QPushButton" name="SignUpButton_Login">
      <property name="geometry">
       <rect>
-       <x>270</x>
-       <y>411</y>
-       <width>187</width>
-       <height>53</height>
+       <x>879</x>
+       <y>429</y>
+       <width>141</width>
+       <height>41</height>
       </rect>
      </property>
      <property name="text">
@@ -185,44 +169,19 @@
       <bool>true</bool>
      </property>
     </widget>
-    <zorder>UserInputLabel</zorder>
-    <zorder>UsernameInput</zorder>
-    <zorder>UsernameInput_2</zorder>
-    <zorder>Logo</zorder>
-    <zorder>LoginButton</zorder>
-    <zorder>SignupButton</zorder>
+    <zorder>BackgroundLabel_Login</zorder>
+    <zorder>UserName_Login</zorder>
+    <zorder>Password_Login</zorder>
+    <zorder>LoginButton_Login</zorder>
+    <zorder>SignUpButton_Login</zorder>
    </widget>
-   <widget class="QLabel" name="label">
-    <property name="geometry">
-     <rect>
-      <x>-40</x>
-      <y>0</y>
-      <width>601</width>
-      <height>571</height>
-     </rect>
-    </property>
-    <property name="text">
-     <string/>
-    </property>
-    <property name="textFormat">
-     <enum>Qt::PlainText</enum>
-    </property>
-    <property name="pixmap">
-     <pixmap>Images/benjamin-rascoe-jCADYzzMl8I-unsplash.jpg</pixmap>
-    </property>
-    <property name="scaledContents">
-     <bool>true</bool>
-    </property>
-   </widget>
-   <zorder>label</zorder>
-   <zorder>frame</zorder>
   </widget>
   <widget class="QMenuBar" name="menubar">
    <property name="geometry">
     <rect>
      <x>0</x>
      <y>0</y>
-     <width>1080</width>
+     <width>1120</width>
      <height>21</height>
     </rect>
    </property>

@@ -14,7 +14,7 @@
    <string>Catalogs</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="BackgroundFrame">
+   <widget class="QFrame" name="CatalogsFrame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgroundLabel">
+    <widget class="QLabel" name="BackgroundLabel_Catalogs_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -48,7 +48,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="HomeButton">
+    <widget class="QPushButton" name="HomeButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -64,7 +64,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="CatalogButton">
+    <widget class="QPushButton" name="CatalogButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -80,7 +80,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="LogOutButton">
+    <widget class="QPushButton" name="LogOutButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -96,7 +96,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataButton">
+    <widget class="QPushButton" name="DataButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -112,7 +112,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UsernameLabel">
+    <widget class="QLabel" name="UsernameLabel_Catalogs">
      <property name="geometry">
       <rect>
        <x>1384</x>
@@ -140,7 +140,7 @@
       <string>Username</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="UserBanButton">
+    <widget class="QPushButton" name="UserBanButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -156,7 +156,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AuditLogButton">
+    <widget class="QPushButton" name="AuditLogButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -172,7 +172,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PersonRegisterbutton">
+    <widget class="QPushButton" name="PersonRegisterbutton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -188,7 +188,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="StatisticsButton">
+    <widget class="QPushButton" name="StatisticsButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -204,7 +204,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecordsButton">
+    <widget class="QPushButton" name="RecordsButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -220,7 +220,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QComboBox" name="AddCatalTableChoice">
+    <widget class="QComboBox" name="AddCatalTableChoice_Catalogs">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -236,7 +236,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="AddCatalogCurrentChoice">
+    <widget class="QComboBox" name="AddCatalogCurrentChoice_Catalogs">
      <property name="geometry">
       <rect>
        <x>643</x>
@@ -252,39 +252,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="AddCatalTableChoice_2">
-     <property name="geometry">
-      <rect>
-       <x>928</x>
-       <y>160</y>
-       <width>141</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QComboBox" name="AddCatalogCurrentChoice_2">
-     <property name="geometry">
-      <rect>
-       <x>1173</x>
-       <y>160</y>
-       <width>121</width>
-       <height>21</height>
-      </rect>
-     </property>
-     <property name="font">
-      <font>
-       <family>Source Sans Pro</family>
-       <pointsize>12</pointsize>
-      </font>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="AddCatalogButton">
+    <widget class="QPushButton" name="AddCatalogButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>357</x>
@@ -300,7 +268,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UpdateCatalogButton">
+    <widget class="QPushButton" name="UpdateCatalogButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>923</x>
@@ -316,7 +284,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UnableCatalogButton">
+    <widget class="QPushButton" name="UnableCatalogButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>923</x>
@@ -332,7 +300,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DeleteCatalogButton">
+    <widget class="QPushButton" name="DeleteCatalogButton_Catalogs">
      <property name="geometry">
       <rect>
        <x>394</x>
@@ -348,7 +316,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QComboBox" name="DeleteCatalTableChoice">
+    <widget class="QComboBox" name="DeleteCatalTableChoice_Catalogs">
      <property name="geometry">
       <rect>
        <x>396</x>
@@ -364,7 +332,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="DeleteCatalCurrentChoice">
+    <widget class="QComboBox" name="DeleteCatalCurrentChoice_Catalogs">
      <property name="geometry">
       <rect>
        <x>640</x>
@@ -380,7 +348,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="UnableCatalTableChoice">
+    <widget class="QComboBox" name="UnableCatalTableChoice_Catalogs">
      <property name="geometry">
       <rect>
        <x>925</x>
@@ -396,7 +364,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="UnableCatalCurrentChoice">
+    <widget class="QComboBox" name="UnableCatalCurrentChoice_Catalogs">
      <property name="geometry">
       <rect>
        <x>1170</x>
@@ -412,7 +380,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QLineEdit" name="UpdateCatalDataInput">
+    <widget class="QLineEdit" name="UpdateCatalDataInput_Catalogs">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -446,7 +414,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UpdateCatalDisplay">
+    <widget class="QLabel" name="UpdateCatalDisplay_Catalogs">
      <property name="geometry">
       <rect>
        <x>1150</x>
@@ -471,7 +439,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="UnableCatalDisplay">
+    <widget class="QLabel" name="UnableCatalDisplay_Catalogs">
      <property name="geometry">
       <rect>
        <x>1154</x>
@@ -496,7 +464,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="DeleteCatalDisplay">
+    <widget class="QLabel" name="DeleteCatalDisplay_Catalogs">
      <property name="geometry">
       <rect>
        <x>620</x>
@@ -521,7 +489,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLabel" name="AddCatalDisplay">
+    <widget class="QLabel" name="AddCatalDisplay_Catalogs">
      <property name="geometry">
       <rect>
        <x>620</x>
@@ -546,7 +514,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="AddCatalogInput">
+    <widget class="QLineEdit" name="AddCatalogInput_Catalogs">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -578,22 +546,6 @@
      </property>
      <property name="clearButtonEnabled">
       <bool>false</bool>
-     </property>
-    </widget>
-    <widget class="QPushButton" name="AddCatalogButton_2">
-     <property name="geometry">
-      <rect>
-       <x>394</x>
-       <y>238</y>
-       <width>127</width>
-       <height>33</height>
-      </rect>
-     </property>
-     <property name="text">
-      <string/>
-     </property>
-     <property name="flat">
-      <bool>true</bool>
      </property>
     </widget>
    </widget>

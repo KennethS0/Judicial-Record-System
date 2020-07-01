@@ -14,7 +14,7 @@
    <string>Statistics</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="BackgroundFrame">
+   <widget class="QFrame" name="StatisticsFrame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgroundLabel">
+    <widget class="QLabel" name="BackgroundLabel_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -48,7 +48,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataButton">
+    <widget class="QPushButton" name="DataButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -64,7 +64,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecordsButton">
+    <widget class="QPushButton" name="RecordsButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -80,7 +80,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="StatisticsButton">
+    <widget class="QPushButton" name="StatisticsButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -96,7 +96,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="LogOutButton">
+    <widget class="QPushButton" name="LogOutButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -112,7 +112,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UsernameLabel">
+    <widget class="QLabel" name="UsernameLabel_Statistics">
      <property name="geometry">
       <rect>
        <x>1390</x>
@@ -140,7 +140,7 @@
       <string>Username</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="HomeButton">
+    <widget class="QPushButton" name="HomeButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -156,7 +156,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AuditLogButton">
+    <widget class="QPushButton" name="AuditLogButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -172,7 +172,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="CatalogButton">
+    <widget class="QPushButton" name="CatalogButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -188,7 +188,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UserBanButton">
+    <widget class="QPushButton" name="UserBanButton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -204,7 +204,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PersonRegisterbutton">
+    <widget class="QPushButton" name="PersonRegisterbutton_Statistics">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -220,7 +220,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="StatApply">
+    <widget class="QPushButton" name="StatApply_Statistics">
      <property name="geometry">
       <rect>
        <x>1275</x>
@@ -236,7 +236,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QComboBox" name="RecordTypeFilter">
+    <widget class="QComboBox" name="RecordTypeFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>399</x>
@@ -252,7 +252,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="AgeRangeFilter">
+    <widget class="QComboBox" name="AgeRangeFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -268,7 +268,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="ProvinceFilter">
+    <widget class="QComboBox" name="ProvinceFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>401</x>
@@ -284,7 +284,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="CountryFilter">
+    <widget class="QComboBox" name="CountryFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -300,7 +300,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="DistrictFilter">
+    <widget class="QComboBox" name="DistrictFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>401</x>
@@ -316,7 +316,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="CantonFilter">
+    <widget class="QComboBox" name="CantonFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -332,7 +332,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="CommunityFilter">
+    <widget class="QComboBox" name="CommunityFilter_Statistics">
      <property name="geometry">
       <rect>
        <x>400</x>
@@ -348,7 +348,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="StatisticsChoice">
+    <widget class="QComboBox" name="StatisticsChoice_Statistics">
      <property name="geometry">
       <rect>
        <x>550</x>
@@ -364,7 +364,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QLabel" name="StatisticsLabel">
+    <widget class="QLabel" name="StatisticsLabel_Statistics">
      <property name="geometry">
       <rect>
        <x>710</x>

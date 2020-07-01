@@ -14,7 +14,7 @@
    <string>Data</string>
   </property>
   <widget class="QWidget" name="centralwidget">
-   <widget class="QFrame" name="BackgroundFrame">
+   <widget class="QFrame" name="DataFrame">
     <property name="geometry">
      <rect>
       <x>0</x>
@@ -29,7 +29,7 @@
     <property name="frameShadow">
      <enum>QFrame::Raised</enum>
     </property>
-    <widget class="QLabel" name="BackgroundLabel">
+    <widget class="QLabel" name="BackgroundLabel_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -48,7 +48,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="PersonRegisterbutton">
+    <widget class="QPushButton" name="PersonRegisterbutton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -64,7 +64,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="UserBanButton">
+    <widget class="QPushButton" name="UserBanButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -80,7 +80,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="AuditLogButton">
+    <widget class="QPushButton" name="AuditLogButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -96,7 +96,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="UsernameLabel">
+    <widget class="QLabel" name="UsernameLabel_DataFrame">
      <property name="geometry">
       <rect>
        <x>1390</x>
@@ -124,7 +124,7 @@
       <string>Username</string>
      </property>
     </widget>
-    <widget class="QPushButton" name="HomeButton">
+    <widget class="QPushButton" name="HomeButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -140,7 +140,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="CatalogButton">
+    <widget class="QPushButton" name="CatalogButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -156,7 +156,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="StatisticsButton">
+    <widget class="QPushButton" name="StatisticsButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -172,7 +172,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataButton">
+    <widget class="QPushButton" name="DataButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -188,7 +188,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="LogOutButton">
+    <widget class="QPushButton" name="LogOutButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -204,7 +204,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="RecordsButton">
+    <widget class="QPushButton" name="RecordsButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -220,7 +220,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataApplyButton">
+    <widget class="QPushButton" name="DataApplyButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>1274</x>
@@ -236,7 +236,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLabel" name="DataDisplay">
+    <widget class="QLabel" name="DataDisplay_DataFrame">
      <property name="geometry">
       <rect>
        <x>710</x>
@@ -261,7 +261,7 @@
       <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
      </property>
     </widget>
-    <widget class="QLineEdit" name="DataInput">
+    <widget class="QLineEdit" name="DataInput_DataFrame">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -295,7 +295,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QComboBox" name="DataTableChoice">
+    <widget class="QComboBox" name="DataTableChoice_DataFrame">
      <property name="geometry">
       <rect>
        <x>394</x>
@@ -311,7 +311,7 @@
       </font>
      </property>
     </widget>
-    <widget class="QComboBox" name="DataEditMode">
+    <widget class="QComboBox" name="DataEditMode_DataFrame">
      <property name="geometry">
       <rect>
        <x>392</x>
@@ -333,7 +333,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QLineEdit" name="DataIDInput">
+    <widget class="QLineEdit" name="DataIDInput_DataFrame">
      <property name="enabled">
       <bool>true</bool>
      </property>
@@ -367,7 +367,7 @@
       <bool>false</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataDisplayButton">
+    <widget class="QPushButton" name="DataDisplayButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>553</x>
@@ -383,7 +383,7 @@
       <bool>true</bool>
      </property>
     </widget>
-    <widget class="QPushButton" name="DataDeleteButton">
+    <widget class="QPushButton" name="DataDeleteButton_DataFrame">
      <property name="geometry">
       <rect>
        <x>551</x>
