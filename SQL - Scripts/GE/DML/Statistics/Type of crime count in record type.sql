@@ -10,6 +10,6 @@ ON res.id = re.resolution_id
 INNER JOIN sentence s
 ON res.sentence_id = s.id
 
-WHERE s.type_of_sentence_id = 7
+WHERE s.type_of_sentence_id = 1
 
 GROUP BY tor.description;

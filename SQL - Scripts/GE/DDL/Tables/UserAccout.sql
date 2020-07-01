@@ -5,5 +5,5 @@ CREATE TABLE UserAccount
     
     -- ATTRIBUTES
     username            VARCHAR2(20) CONSTRAINT user_username_nn NOT NULL,
-    password            VARCHAR2(100) CONSTRAINT user_password_nn NOT NULL
+    password            VARCHAR2(500) CONSTRAINT user_password_nn NOT NULL
 );

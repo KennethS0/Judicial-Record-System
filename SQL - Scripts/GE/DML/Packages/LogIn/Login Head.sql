@@ -16,8 +16,8 @@ CREATE OR REPLACE PACKAGE LogInSystem AS
     FUNCTION verifyUser (pId NUMBER, pPassword VARCHAR2)
     RETURN NUMBER;
     
+    -- MAKES A USER AN ADMIN
+    PROCEDURE makeAdmin (pUsername VARCHAR2);
     
 END LogInSystem;
 /
-
-

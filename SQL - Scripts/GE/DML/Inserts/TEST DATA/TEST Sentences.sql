@@ -1,0 +1,17 @@
+INSERT ALL
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (6, TO_DATE('1998/07/07', 'YYYY/MM/DD'), TO_DATE('1998/09/01', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (3, TO_DATE('1998/10/02', 'YYYY/MM/DD'), TO_DATE('1998/11/02', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (1, TO_DATE('2000/02/02', 'YYYY/MM/DD'), TO_DATE('2010/12/30', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (4, TO_DATE('2003/02/14', 'YYYY/MM/DD'), TO_DATE('2003/08/14', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (7, TO_DATE('2003/10/06', 'YYYY/MM/DD'), TO_DATE('2004/10/06', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (6, TO_DATE('2003/12/03', 'YYYY/MM/DD'), TO_DATE('2004/02/01', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (3, TO_DATE('2005/09/04', 'YYYY/MM/DD'), TO_DATE('2005/10/04', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (1, TO_DATE('2005/10/14', 'YYYY/MM/DD'), TO_DATE('2006/04/14', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (1, TO_DATE('2007/09/13', 'YYYY/MM/DD'), TO_DATE('2009/09/13', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (1, TO_DATE('2009/12/01', 'YYYY/MM/DD'), TO_DATE('2015/12/01', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (3, TO_DATE('2009/03/03', 'YYYY/MM/DD'), TO_DATE('2009/04/04', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (4, TO_DATE('2009/07/04', 'YYYY/MM/DD'), TO_DATE('2010/01/01', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (3, TO_DATE('2009/08/03', 'YYYY/MM/DD'), TO_DATE('2009/09/03', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (7, TO_DATE('2011/07/09', 'YYYY/MM/DD'), TO_DATE('2013/07/09', 'YYYY/MM/DD'))
+   INTO sentence(type_of_sentence_id, initial_date, final_date) VALUES (1, TO_DATE('2011/10/10', 'YYYY/MM/DD'), TO_DATE('2019/03/03', 'YYYY/MM/DD'))
+SELECT * FROM DUAL;

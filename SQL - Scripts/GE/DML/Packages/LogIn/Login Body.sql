@@ -67,5 +67,26 @@ CREATE OR REPLACE PACKAGE BODY LogInSystem AS
         RETURN (verified);
     END;
         
+        
+    -- MAKES A USER AN ADMIN
+    PROCEDURE makeAdmin (pUsername VARCHAR2)
+    IS
+        userCopy VARCHAR2(20);
+        passwordCopy VARCHAR2(500);
+        userId NUMBER(6);
+    BEGIN
+        -- GRABS THE DATA
+        SELECT username, password, id INTO userCopy, passwordCopy, userId
+        FROM useraccount
+        WHERE username = pUsername;
+                
+        -- INSERTS THE DATA
+        INSERT INTO administrator (username, password, user_id)
+        VALUES (userCopy, passwordCopy, userId);
+        
+        COMMIT;
+    END;
+        
+        
 END LogInSystem;
 /

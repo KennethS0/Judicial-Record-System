@@ -22,7 +22,7 @@ class Database():
         '''
         
         # No user connected
-        self.userConnected = None
+        self.connectedUser = None
         
         # Declaring a connection right away
         if pConnection:
@@ -46,7 +46,7 @@ class Database():
             Closes the database connection.
         '''
         self.connection.close()
-        self.userConnected = None
+        self.connectedUser = None
 
 
     def logUser(self, pUser, pPassword):
@@ -65,15 +65,14 @@ class Database():
             decryptedPassword = rsa.decrypt(encryptedPassword, self.__getPrivateKey()).decode('utf-8')
             
             if decryptedPassword == pPassword:
-                
                 # Sets the connected user with the corresponding information
-                self.userConnected = User.User(user_id, pUser, pPassword)
-                self.userConnected.isAdmin = cursor.callfunc(I.IS_ADMIN , int, [user_id])
+                self.connectedUser = User.User(user_id, pUser, pPassword)
+                self.connectedUser.isAdmin = cursor.callfunc(I.IS_ADMIN , int, [user_id])
 
             cursor.close()
 
         except Exception as err:
-            self.userConnected = None
+            self.connectedUser = None
             print(err)
 
 
@@ -95,6 +94,21 @@ class Database():
 
         except Exception as err:
             print('Error inserting user:', err)
+
+
+    def makeAdmin(self, pUser):
+        '''
+        Makes a user an administrator.
+        '''
+        try:
+            cursor = self.connection.cursor()
+            data = (pUser,)
+
+            cursor.callproc(I.MAKE_ADMIN, data)
+            cursor.close()
+            
+        except Exception as err:
+            print(err)
 
 
     def adminQuery (self, pType, pPackageInstruction, parameters=[], returnType=None, getRows=False):
@@ -119,7 +133,7 @@ class Database():
         '''
         
         # Checks for valid user (has to be an admin)
-        if not ( self.userConnected and self.userConnected.isAdmin ):
+        if not ( self.connectedUser and self.connectedUser.isAdmin ):
             return
         
         else:
@@ -130,7 +144,7 @@ class Database():
         '''
         Returns the value returned by a specific query.
         '''
-        if pReturnType == None or not ( self.userConnected and self.userConnected.isAdmin):
+        if pReturnType == None or not ( self.connectedUser and self.connectedUser.isAdmin):
             return
         
         else:
@@ -158,7 +172,7 @@ class Database():
         the user has permissions to view them.
         '''
         # Checks for valid user (has to be an admin)
-        if not self.userConnected:
+        if not self.connectedUser:
             return
 
         else:
@@ -169,7 +183,7 @@ class Database():
         '''
         Returns the value returned by a specific query.
         '''
-        if pReturnType == None or not self.userConnected:
+        if pReturnType == None or not self.connectedUser:
             return
         else:
             return self.__callFunction(pPackageInstruction, pParameters, pReturnType)

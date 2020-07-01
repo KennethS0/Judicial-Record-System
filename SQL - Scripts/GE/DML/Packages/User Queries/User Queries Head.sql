@@ -6,7 +6,7 @@ CREATE OR REPLACE PACKAGE user_queries AS
     PROCEDURE getAllUsers (pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS THE MOST DANGEROUS CANTONS 
-    PROCEDURE getDangerousCantons (pTopN NUMBER, pRecordSet OUT SYS_REFCURSOR);
+    PROCEDURE getDangerousZones (pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS ALL THE SENTENCES THAT ARE SOON TO EXPIRE
     PROCEDURE getSoonToExpire (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR);
@@ -19,6 +19,10 @@ CREATE OR REPLACE PACKAGE user_queries AS
     
     -- GETS ALL CRIMES COMMITED BY ONE PERSON
     PROCEDURE getCommitedCrimes (pPersonId NUMBER, pRecordSet OUT SYS_REFCURSOR);
+    
+    -- GETS A RANKING OF THE PEOPLE WITH THE MOST AMOUNT OF CRIMES
+    PROCEDURE getMostCrimesCommitted (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR);
+ 
     
 END user_queries;
 /

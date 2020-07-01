@@ -1,0 +1,17 @@
+INSERT ALL
+    INTO crime(record_id, type_id, date_commited) VALUES (1, 13, TO_DATE('1998/01/14', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (2, 14, TO_DATE('1998/01/15', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (3, 1, TO_DATE('2000/01/01', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (4, 14, TO_DATE('2003/01/09', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (5, 15, TO_DATE('2003/05/05', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (6, 16, TO_DATE('2003/12/03', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (7, 14, TO_DATE('2005/08/10', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (8, 9, TO_DATE('2005/08/10', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (9, 15, TO_DATE('2007/08/01', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (10, 6, TO_DATE('2009/02/09', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (11, 17, TO_DATE('2009/02/19', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (12, 14, TO_DATE('2009/05/16', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (13, 6, TO_DATE('2009/05/13', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (14, 1, TO_DATE('2011/04/03', 'YYYY/MM/DD'))
+    INTO crime(record_id, type_id, date_commited) VALUES (15, 1, TO_DATE('2011/11/11', 'YYYY/MM/DD'))
+SELECT * FROM DUAL;

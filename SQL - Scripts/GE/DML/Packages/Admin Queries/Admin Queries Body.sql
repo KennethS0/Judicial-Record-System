@@ -19,8 +19,13 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             
     -- SHOWS ALL THE NEW RECORDS IN THE DAY
     PROCEDURE getNewRecords (pRecordSet OUT SYS_REFCURSOR) AS
+    advalue VARCHAR2(20);
     BEGIN
         OPEN pRecordSet FOR
+            -- SELECT FROM PARAMETER FROM AD
+            SELECT value INTO advalue FROM ad.parameter 
+            WHERE name = 'NEW_RECORDS';
+        
             -- Shows the number of new records in the database.
             -- A record is considered new if it is inserted the same day.1
             SELECT jn.year ||'-'|| jn.consecutive ||'-'|| o.id ||'-'|| o.subject_code as JUDICIAL_NUMBER FROM record r
@@ -34,14 +39,19 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             ON o.id = jn.office_id
             
             -- Condition to show all the records that were made in the day.
-            WHERE r.creation_date >= SYSDATE - 1; 
+            WHERE r.creation_date >= SYSDATE - CAST(advalue AS NUMBER); 
     END;
     
     
     -- SHOWS ALL THE USERS THAT HAVEN'T CHANGED THEIR PASSWORD IN THE LAST 10 DAYS
     PROCEDURE getUnmodifiedPasswords(pRecordSet OUT SYS_REFCURSOR) AS
+    advalue VARCHAR2(20);
     BEGIN
         OPEN pRecordSet FOR
+            -- GET PARAMETER VALUE
+            SELECT value INTO advalue FROM ad.parameter
+            WHERE name = 'UNMODIFIED_PASSWORDS';
+        
             -- Shows all the unmodified passwords from the past 10 days.
             SELECT UNIQUE(ua.username) FROM ad.passwordhistory ph
             
@@ -50,7 +60,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             ON ua.id = ph.user_id
             
             -- Condition to show only passwords created more than 10 days ago.
-            WHERE ph.creation_date <= SYSDATE - 10; 
+            WHERE ph.creation_date <= SYSDATE - CAST(advalue AS NUMBER); 
     END;
     
     
@@ -81,7 +91,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
         average NUMBER(15);
     BEGIN
         -- Shows the average time for a resolution (If a record doesn't have one then it is not counted.)
-        SELECT AVG(psp.date_submitted - r.resolution_date) INTO average FROM resolution r
+        SELECT AVG(r.resolution_date - psp.date_submitted) INTO average FROM resolution r
         
         -- Joins with RECORD (re) to get the corresponding resolution
         INNER JOIN record re

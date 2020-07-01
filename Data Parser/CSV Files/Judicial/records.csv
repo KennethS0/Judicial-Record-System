@@ -1,0 +1,31 @@
+resolution_id,type_id,user_id,sue_id,description,written_date,number_id
+1,12,2,1,Consta que en este expediente se guardará la información relacionada con el caso de tránsito.,1998/01/20,1
+2,7,4,2,Consta que en este expediente se guardará la información relacionada con el caso de labor extendido.,1998/01/21,2
+3,1,6,3,Consta que en este expediente se guardará la información relacionada con el caso de abuso.,2000/01/05,3
+4,7,8,4,Consta que en este expediente se guardará la información relacionada con el caso laboral.,2003/01/15,4
+5,6,10,5,Consta que en este expediente se guardará la información relacionada con el caso de traspaso.,2003/05/11,5
+6,6,12,6,Consta que en este expediente se guardará la información relacionada con el caso de vecindario.,2003/12/10,6
+7,7,14,7,Consta que en este expediente se guardará la información relacionada con el caso de labor sin paga.,2005/08/14,7
+8,4,16,8,Consta que en este expediente se guardará la información relacionada con el caso de violación de derechos como padre.,2005/08/15,8
+9,6,18,9,Consta que en este expediente se guardará la información relacionada con el caso de traspaso.,2007/08/16,9
+10,4,20,10,Consta que en este expediente se guardará la información relacionada con el caso de hurto.,2009/02/12,10
+11,4,22,11,Consta que en este expediente se guardará la información relacionada con el caso de difamación.,2009/02/21,11
+12,7,24,12,Consta que en este expediente se guardará la información relacionada con el caso de mala conducta laboral.,2009/05/18,12
+13,4,26,13,Consta que en este expediente se guardará la información relacionada con el caso de hurto.,2009/05/19,13
+14,4,28,14,Consta que en este expediente se guardará la información relacionada con el caso de extorsión.,2011/04/10,14
+15,1,30,15,Consta que en este expediente se guardará la información relacionada con el caso de abuso sexual.,2011/11/20,15
+,4,32,16,Consta que en este expediente se guardará la información relacionada con el caso de conducta indeseada.,2011/12/20,16
+,4,34,17,Consta que en este expediente se guardará la información relacionada con el caso de publicidad engañosa.,2012/11/17,17
+,4,36,18,Consta que en este expediente se guardará la información relacionada con el caso de hurto.,2013/05/14,18
+,4,38,19,Consta que en este expediente se guardará la información relacionada con el caso de acecho.,2013/11/03,19
+,4,40,20,Consta que en este expediente se guardará la información relacionada con el caso de difamación.,2015/06/08,20
+,1,42,21,Consta que en este expediente se guardará la información relacionada con el caso de abuso.,2016/09/27,21
+,9,44,22,Consta que en este expediente se guardará la información relacionada con el caso de pensión.,2016/10/02,22
+,9,46,23,Consta que en este expediente se guardará la información relacionada con el caso de pensión.,2016/12/21,23
+,1,48,24,Consta que en este expediente se guardará la información relacionada con el caso de violación.,2018/04/29,24
+,1,50,25,Consta que en este expediente se guardará la información relacionada con el caso de abuso doméstico.,2020/11/10,25
+,4,52,26,Consta que en este expediente se guardará la información relacionada con el caso de hurto.,1997/09/03,26
+,4,54,27,Consta que en este expediente se guardará la información relacionada con el caso de asalto.,1999/01/10,27
+,4,56,28,Consta que en este expediente se guardará la información relacionada con el caso de difamación.,2000/11/17,28
+,6,58,29,Consta que en este expediente se guardará la información relacionada con el caso de venta de droga.,2004/08/10,29
+,1,60,30,Consta que en este expediente se guardará la información relacionada con el caso de abuso.,2007/03/31,30
