@@ -190,3 +190,4 @@ ALTER TABLE useraccount
         modification_user VARCHAR2(10),
         MODIFICATION_DATE DATE
         );
+        

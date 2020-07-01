@@ -96,6 +96,21 @@ class Database():
             print('Error inserting user:', err)
 
 
+    def makeAdmin(self, pUser):
+        '''
+        Makes a user an administrator.
+        '''
+        try:
+            cursor = self.connection.cursor()
+            data = (pUser,)
+
+            cursor.callproc(I.MAKE_ADMIN, data)
+            cursor.close()
+            
+        except Exception as err:
+            print(err)
+
+
     def adminQuery (self, pType, pPackageInstruction, parameters=[], returnType=None, getRows=False):
         '''
             Returns the result of a specified query
