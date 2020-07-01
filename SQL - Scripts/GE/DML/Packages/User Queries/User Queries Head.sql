@@ -22,6 +22,7 @@ CREATE OR REPLACE PACKAGE user_queries AS
     
     -- GETS A RANKING OF THE PEOPLE WITH THE MOST AMOUNT OF CRIMES
     PROCEDURE getMostCrimesCommitted (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR);
+ 
     
 END user_queries;
 /

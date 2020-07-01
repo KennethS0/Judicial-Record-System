@@ -1,4 +1,4 @@
-SELECT COUNT(id) AS expired, 
+SELECT COUNT(id) AS expired,
        ((COUNT(*) * 100) / (SELECT COUNT(*) FROM sentence)) AS percentage,
        (SELECT COUNT(*) FROM sentence) AS total
        FROM sentence
