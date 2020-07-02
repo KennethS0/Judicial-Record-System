@@ -61,7 +61,7 @@ class Ui_MainWindow(object):
         self.BackgroundLabel_Login.setGeometry(QtCore.QRect(0, 0, 1161, 681))
         self.BackgroundLabel_Login.setText("")
         self.BackgroundLabel_Login.setTextFormat(QtCore.Qt.PlainText)
-        self.BackgroundLabel_Login.setPixmap(QtGui.QPixmap("Images/SignInPage.png"))
+        self.BackgroundLabel_Login.setPixmap(QtGui.QPixmap("Images/Login/SignInPage.png"))
         self.BackgroundLabel_Login.setScaledContents(True)
         self.BackgroundLabel_Login.setObjectName("BackgroundLabel_Login")
         self.LoginButton_Login = QtWidgets.QPushButton(self.frame)

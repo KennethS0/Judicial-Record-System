@@ -42,7 +42,7 @@
       <string/>
      </property>
      <property name="pixmap">
-      <pixmap>Images/User-RecordRegister.png</pixmap>
+      <pixmap>Images/User/User-RecordRegister.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>

@@ -69,7 +69,6 @@ class Database():
             decryptedPassword = rsa.decrypt(encryptedPassword, self.__getPrivateKey()).decode('utf-8')
             
             if decryptedPassword == pPassword:
-                print('connected!')
                 # Sets the connected user with the corresponding information
                 self.connectedUser = User.User(user_id, pUser, pPassword)
                 self.connectedUser.isAdmin = cursor.callfunc(I.IS_ADMIN , int, [user_id])

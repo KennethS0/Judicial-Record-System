@@ -9,6 +9,8 @@ sys.path.insert(0, main_dir)
 # Necessary imports
 from Application.Model.DatabaseConnection.Database import Database 
 from Application.Views.LoginView.login import Ui_MainWindow
+from Application.Controller.AdminController.AdminController import AdminController 
+from Application.Controller.UserController.UserController import UserController
 
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
@@ -26,27 +28,26 @@ class LogInController:
         self.view = Ui_MainWindow()
 
         # Loads application
-        self.app = QtWidgets.QApplication(sys.argv)
-        self.MainWindow = QtWidgets.QMainWindow()
-        self.view.setupUi(self.MainWindow)
+        app = QtWidgets.QApplication(sys.argv)
+        MainWindow = QtWidgets.QMainWindow()
+        self.view.setupUi(MainWindow)
 
         # Sets event
-        self.view.LoginButton_Login.clicked.connect(self.login_clicked)
+        self.view.LoginButton_Login.clicked.connect(lambda: self.login_clicked(MainWindow, app))
 
-        self.loadUi()
+        self.loadUi(MainWindow, app)
 
        
-
-    def loadUi(self):
+    def loadUi(self, pMainWindow, pApp):
         '''
         Renders the application for the user
         '''
-        self.MainWindow.show()
-        sys.exit(self.app.exec_())
-        sys.exit(self.model.disconnect())
+        pMainWindow.show()
+        sys.exit(pApp.exec_())
+        sys.exit(self.Model.disconnect())
 
 
-    def login_clicked(self, pMainWindow):
+    def login_clicked(self, pMainWindow, pApp):
         '''
         Event for log in
         '''
@@ -60,11 +61,12 @@ class LogInController:
 
             # Invokes the new window
             if self.model.getUser().isAdmin == True:
-                print('ADMIN')
+                ac = AdminController(pMainWindow, pApp)
             else:
-                print('NOT ADMIN')
+                uc = UserController(pMainWindow, pApp)
 
-        except:
+        except Exception as err:
+            print(err)
             self.view.UserName_Login.setText('')
             self.view.Password_Login.setText('')
             self.show_error('Invalid Credentials', 'Please enter a valid username or password.')

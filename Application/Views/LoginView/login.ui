@@ -131,7 +131,7 @@
       <enum>Qt::PlainText</enum>
      </property>
      <property name="pixmap">
-      <pixmap>Images/SignInPage.png</pixmap>
+      <pixmap>Images/Login/SignInPage.png</pixmap>
      </property>
      <property name="scaledContents">
       <bool>true</bool>
