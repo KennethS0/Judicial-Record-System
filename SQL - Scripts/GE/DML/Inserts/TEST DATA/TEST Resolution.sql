@@ -1,0 +1,17 @@
+INSERT ALL
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (1, TO_DATE('1998/07/07', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (2, TO_DATE('1998/10/02', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (3, TO_DATE('2000/02/02', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (4, TO_DATE('2003/02/14', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (5, TO_DATE('2003/10/06', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (6, TO_DATE('2003/12/03', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (7, TO_DATE('2005/09/04', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (8, TO_DATE('2005/10/14', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (9, TO_DATE('2007/09/13', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (10, TO_DATE('2009/12/01', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (11, TO_DATE('2009/03/03', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (12, TO_DATE('2009/07/04', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (13, TO_DATE('2009/08/03', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (14, TO_DATE('2011/07/09', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+   INTO resolution(sentence_id, resolution_date, description_) VALUES (15, TO_DATE('2011/10/10', 'YYYY/MM/DD'), 'La parte acusada se declara culpable.')
+SELECT * FROM DUAL;

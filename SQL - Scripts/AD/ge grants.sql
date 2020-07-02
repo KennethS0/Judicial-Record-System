@@ -1,0 +1,2 @@
+GRANT SELECT, INSERT, UPDATE ON passwordhistory TO ge;
+GRANT SELECT, INSERT, DELETE, UPDATE ON parameter TO ge;
