@@ -24,7 +24,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>9</number>
     </property>
     <widget class="QWidget" name="HomePage">
      <widget class="QFrame" name="HomeFrame">
@@ -5211,114 +5211,6 @@
         <bool>true</bool>
        </property>
       </widget>
-      <widget class="QDateEdit" name="InitialDate_Resolution">
-       <property name="geometry">
-        <rect>
-         <x>980</x>
-         <y>220</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Source Sans Pro</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="acceptDrops">
-        <bool>false</bool>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="wrapping">
-        <bool>false</bool>
-       </property>
-       <property name="frame">
-        <bool>false</bool>
-       </property>
-       <property name="buttonSymbols">
-        <enum>QAbstractSpinBox::UpDownArrows</enum>
-       </property>
-       <property name="showGroupSeparator" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QDateEdit" name="FinalDate_Resolution">
-       <property name="geometry">
-        <rect>
-         <x>1170</x>
-         <y>218</y>
-         <width>101</width>
-         <height>31</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Source Sans Pro</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="acceptDrops">
-        <bool>false</bool>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="wrapping">
-        <bool>false</bool>
-       </property>
-       <property name="frame">
-        <bool>false</bool>
-       </property>
-       <property name="buttonSymbols">
-        <enum>QAbstractSpinBox::UpDownArrows</enum>
-       </property>
-       <property name="showGroupSeparator" stdset="0">
-        <bool>false</bool>
-       </property>
-       <property name="calendarPopup">
-        <bool>true</bool>
-       </property>
-      </widget>
-      <widget class="QLineEdit" name="DescriptionInput_Resolution">
-       <property name="enabled">
-        <bool>true</bool>
-       </property>
-       <property name="geometry">
-        <rect>
-         <x>910</x>
-         <y>344</y>
-         <width>381</width>
-         <height>151</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Source Sans Pro</family>
-         <pointsize>12</pointsize>
-        </font>
-       </property>
-       <property name="cursor">
-        <cursorShape>IBeamCursor</cursorShape>
-       </property>
-       <property name="acceptDrops">
-        <bool>true</bool>
-       </property>
-       <property name="autoFillBackground">
-        <bool>false</bool>
-       </property>
-       <property name="frame">
-        <bool>false</bool>
-       </property>
-       <property name="clearButtonEnabled">
-        <bool>false</bool>
-       </property>
-      </widget>
       <widget class="QLineEdit" name="FirstSpaceRecordNum_Resolution">
        <property name="enabled">
         <bool>true</bool>
@@ -5455,13 +5347,13 @@
         <bool>false</bool>
        </property>
       </widget>
-      <widget class="QComboBox" name="CrimeTypeFilter_Resolution">
+      <widget class="QLabel" name="ResolutionDisplay_Resolution">
        <property name="geometry">
         <rect>
-         <x>426</x>
-         <y>223</y>
-         <width>151</width>
-         <height>26</height>
+         <x>905</x>
+         <y>344</y>
+         <width>391</width>
+         <height>151</height>
         </rect>
        </property>
        <property name="font">
@@ -5469,22 +5361,31 @@
          <family>Source Sans Pro</family>
          <pointsize>12</pointsize>
         </font>
+       </property>
+       <property name="autoFillBackground">
+        <bool>false</bool>
+       </property>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="alignment">
+        <set>Qt::AlignLeading|Qt::AlignLeft|Qt::AlignTop</set>
        </property>
       </widget>
-      <widget class="QComboBox" name="SentenceTypeFilter_Resolution">
+      <widget class="QPushButton" name="ApplyButton_Resolution">
        <property name="geometry">
         <rect>
-         <x>426</x>
-         <y>380</y>
-         <width>151</width>
-         <height>26</height>
+         <x>1283</x>
+         <y>689</y>
+         <width>127</width>
+         <height>33</height>
         </rect>
        </property>
-       <property name="font">
-        <font>
-         <family>Source Sans Pro</family>
-         <pointsize>12</pointsize>
-        </font>
+       <property name="text">
+        <string/>
+       </property>
+       <property name="flat">
+        <bool>true</bool>
        </property>
       </widget>
       <zorder>BackgroundLabel_Resolution</zorder>
@@ -5500,15 +5401,12 @@
       <zorder>UsernameLabel_Resolution</zorder>
       <zorder>ResolutionButton_Resolution</zorder>
       <zorder>GeneralQueriesButton_Resolution</zorder>
-      <zorder>InitialDate_Resolution</zorder>
-      <zorder>FinalDate_Resolution</zorder>
-      <zorder>DescriptionInput_Resolution</zorder>
       <zorder>FirstSpaceRecordNum_Resolution</zorder>
       <zorder>SecSpaceRecordNum_Resolution</zorder>
       <zorder>FourthSpaceRecNum_Resolution</zorder>
       <zorder>ThirdSpaceRecNum_Resolution</zorder>
-      <zorder>CrimeTypeFilter_Resolution</zorder>
-      <zorder>SentenceTypeFilter_Resolution</zorder>
+      <zorder>ResolutionDisplay_Resolution</zorder>
+      <zorder>ApplyButton_Resolution</zorder>
      </widget>
     </widget>
     <widget class="QWidget" name="SignUpPage">
