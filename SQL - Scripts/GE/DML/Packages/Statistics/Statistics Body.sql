@@ -31,15 +31,13 @@ CREATE OR REPLACE PACKAGE BODY statistics AS
     
     
 -- GETS ALL EXPIRED SENTENCES IN THE SYSTEM BETWEEN A RANGE OF DATES
-    PROCEDURE getExpiredSentences (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR) AS
+    PROCEDURE getExpiredSentences (pRecordSet OUT SYS_REFCURSOR) AS
     BEGIN
         OPEN pRecordSet FOR
             SELECT COUNT(id) AS expired,
                    ((COUNT(*) * 100) / (SELECT COUNT(*) FROM sentence)) AS percentage,
                    (SELECT COUNT(*) FROM sentence) AS total
             FROM sentence
-            WHERE final_date < pInitialDate OR 
-            final_date BETWEEN pInitialDate AND pFinalDate
             GROUP BY 1;
     END;
     

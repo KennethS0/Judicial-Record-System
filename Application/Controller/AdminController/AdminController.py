@@ -14,6 +14,8 @@ import Application.Model.DatabaseConnection.Instructions as I
 from PyQt5 import QtCore, QtGui, QtWidgets
 from PyQt5.QtWidgets import QMessageBox
 
+from PyQt5.QtChart import QChart, QChartView, QPieSeries, QPieSlice, QLegend
+
 class AdminController:
 
     def __init__(self, pMainWindow, pApp):
@@ -28,6 +30,14 @@ class AdminController:
         # LOAD INFORMATION
         self.add_queries(self.view.QueryChoice_GeneralQueries)
         self.disableFilters()
+
+        # ----------- STATISTICS DATA
+        self.disableStatisticFilters()
+        self.add_StatisticsData()
+
+        # ----------- STATISTICS EVENTS
+        self.view.StatisticsChoice_Statistics.currentIndexChanged.connect(lambda: self.select_stat())
+        self.view.StatApply_Statistics.clicked.connect(lambda: self.applyStat())
 
         # ----------- GENERAL QUERIES
         self.view.QueryChoice_GeneralQueries.currentIndexChanged.connect(lambda: self.select_query())
@@ -192,3 +202,93 @@ class AdminController:
         msg.setStandardButtons(QMessageBox.Retry)
 
         msg.exec_()
+
+    def createChart(self):
+        pass
+
+    def disableStatisticFilters(self):
+        filters = [self.view.RecordTypeFilter_Statistics,
+        self.view.AgeRangeFilter_Statistics,
+        self.view.ProvinceFilter_Statistics,
+        self.view.CountryFilter_Statistics, 
+        self.view.DistrictFilter_Statistics,
+        self.view.CantonFilter_Statistics,
+        self.view.CommunityFilter_Statistics]
+
+        for i in filters:
+            i.setEnabled(False)
+
+    def add_StatisticsData(self):
+        statistics = [
+            'ACCOUNT AGE RANGES',
+            'PROSECUTOR RANGES',
+            'DEFENDANT AGES',
+            'EXPIRED SENTENCES',
+            'FILES BY ZONE',
+            'RECORD BY CLASSIFICATION',
+            'RECORD BY SENTENCE'
+        ]
+
+        self.view.StatisticsChoice_Statistics.addItems(statistics)
+        
+        recordTypes = self.model.adminQuery(I.PROCEDURE, 'GETDATA.GETSENTENCETYPES', parameters=[], getRows=True)
+        for i in recordTypes:
+            self.view.RecordTypeFilter_Statistics.addItem(str(i[1]))
+
+        
+
+    def select_stat(self):
+        stats = {
+            'ACCOUNT AGE RANGES': [],
+            'PROSECUTOR RANGES': [],
+            'DEFENDANT AGES': [],
+            'EXPIRED SENTENCES': [],
+            'FILES BY ZONE': [], # NOT EMPTY
+            'RECORD BY CLASSIFICATION': [],
+            'RECORD BY SENTENCE': [self.view.RecordTypeFilter_Statistics]
+        }
+
+        selected = self.view.StatisticsChoice_Statistics.currentText()
+        query = stats[selected]
+        
+        for filter in query:
+            filter.setEnabled(True)
+
+
+    def applyStat(self):
+        QUERIES = {
+            'ACCOUNT AGE RANGES': 'STATISTICS.GETACCOUNTRANGES',
+            'PROSECUTOR RANGES': 'STATISTICS.GETAGEPROSECUTORS',
+            'DEFENDANT AGES': 'STATISTICS.GETAGESDEFENDANTS',
+            'EXPIRED SENTENCES': 'STATISTICS.GETEXPIREDSENTENCES',
+            'FILES BY ZONE': 'STATISTICS.GETFILESBYZONE', # NOT EMPTY
+            'RECORD BY CLASSIFICATION': 'STATISTICS.GETRECORDSBYCLASSIFICATION',
+            'RECORD BY SENTENCE': 'STATISTICS.GETRECORDSBYSENTENCE'
+        }
+
+        self.view.StatisticsLabel_Statistics.clear()
+        selected = self.view.StatisticsChoice_Statistics.currentText()
+        instruction = QUERIES[selected]
+
+        data = []
+        if selected == 'RECORD BY SENTENCE':
+            data.append(self.view.RecordTypeFilter_Statistics.currentText())
+
+        try: 
+            result = self.model.adminQuery(I.PROCEDURE, instruction, parameters=data, getRows=True)
+            header = ''
+           
+            # PRINTS COLUMN NAMES
+            for column in result.description:
+                header += "    |   " + str(column[0])
+            self.view.StatisticsLabel_Statistics.addItem(header)
+            self.view.StatisticsLabel_Statistics.addItem('-'*1000)
+            
+            # PRINTS VALUES
+            for row in result:
+                string = ''
+                for data in row:
+                    string += "    |   " + str(data)
+                self.view.StatisticsLabel_Statistics.addItem(string)
+        except:
+            return

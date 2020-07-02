@@ -47,4 +47,50 @@ CREATE OR REPLACE PACKAGE BODY getData AS
         RETURN (vId);
     END;
     
+    -- GETS ALL TYPES OF RECORDS
+    PROCEDURE getSentenceTypes (pRecordSet OUT SYS_REFCURSOR) AS
+    BEGIN
+        OPEN pRecordSet FOR
+            SELECT id, type FROM type_of_sentence;
+    END;
+    
+    -- GETS ALL COUNTRIES
+    PROCEDURE getCountries (pRecordSet OUT SYS_REFCURSOR) AS
+    BEGIN
+        OPEN pRecordSet FOR
+            SELECT id, name FROM country;
+    END;
+    
+    -- GETS ALL PROVINCES
+    PROCEDURE getProvinces (pCountryId NUMBER, pRecordSet OUT SYS_REFCURSOR) AS
+    BEGIN
+        OPEN pRecordSet FOR
+            SELECT id, name FROM province
+            WHERE country_id = pCountryId;
+    END;
+    
+    -- GETS ALL CANTONS
+    PROCEDURE getCantons (pProvinceId NUMBER, pRecordSet OUT SYS_REFCURSOR) AS
+    BEGIN
+        OPEN pRecordSet FOR
+            SELECT id, name FROM canton
+            WHERE province_id = pProvinceId;
+    END;
+    
+    -- GETS ALL DISTRICTS
+    PROCEDURE getDistricts (pCantonId NUMBER, pRecordSet OUT SYS_REFCURSOR) AS
+    BEGIN
+        OPEN pRecordSet FOR
+            SELECT id, name FROM district
+            WHERE canton_id = pCantonId;
+    END;
+    
+    -- GETS ALL COMMUNITIES
+    PROCEDURE getCommunities (pDistrictId NUMBER, pRecordSet OUT SYS_REFCURSOR) AS
+    BEGIN
+        OPEN pRecordSet FOR
+            SELECT id, name FROM community
+            WHERE district_id = pDistrictId;
+    END;
+    
 END getData;
