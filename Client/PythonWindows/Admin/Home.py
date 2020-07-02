@@ -2209,7 +2209,7 @@ class Ui_MainMenu(object):
         self.CancelButton_SignUp.setText("")
         self.CancelButton_SignUp.setFlat(True)
         self.CancelButton_SignUp.setObjectName("CancelButton_SignUp")
-        self.CancelButton_SignUp.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(self.stackedWidget.currentIndex() + 2))
+        self.CancelButton_SignUp.clicked.connect(lambda: self.stackedWidget.setCurrentIndex(self.stackedWidget.currentIndex() - 10))
         self.stackedWidget.addWidget(self.SignUpPage)
         self.RecordRegisterPage = QtWidgets.QWidget()
         self.RecordRegisterPage.setObjectName("RecordRegisterPage")

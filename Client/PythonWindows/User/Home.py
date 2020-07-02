@@ -138,9 +138,6 @@ class Ui_UserHome(object):
         self.RecordRegisterButton_RecordRegister.setText("")
         self.RecordRegisterButton_RecordRegister.setFlat(True)
         self.RecordRegisterButton_RecordRegister.setObjectName("RecordRegisterButton_RecordRegister")
-        
-
-
         self.PersRegisterButton_RecordRegister = QtWidgets.QPushButton(self.RecordRegisterFrame)
         self.PersRegisterButton_RecordRegister.setGeometry(QtCore.QRect(0, 230, 241, 51))
         self.PersRegisterButton_RecordRegister.setText("")
