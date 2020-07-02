@@ -32,7 +32,6 @@ class LogInController:
 
         # Sets event
         self.view.LoginButton_Login.clicked.connect(self.login_clicked)
-        
 
         self.loadUi()
 
@@ -58,12 +57,12 @@ class LogInController:
             # Connects to the database to log the user
             self.model.connect(self.GENERAL_CONNECTION)
             self.model.logUser(username, password)
-            
+
             # Invokes the new window
             if self.model.getUser().isAdmin == True:
-                pass
+                print('ADMIN')
             else:
-                pass
+                print('NOT ADMIN')
 
         except:
             self.view.UserName_Login.setText('')
