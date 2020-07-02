@@ -1,0 +1,12 @@
+CREATE OR REPLACE PACKAGE getData AS
+    
+    -- GETS ALL JUDICIAL CIRCUITS
+    PROCEDURE getCircuits (pRecordSet OUT SYS_REFCURSOR);
+    
+    -- GETS ALL THE OFFICES FROM A CIRCUIT
+    PROCEDURE getOffices (pCircuitId NUMBER, pRecordSet OUT SYS_REFCURSOR);
+    
+    -- GET LAWSUITS WITHOUT RECORD
+    PROCEDURE getRecordlessLawsuits (pUserId NUMBER, pRecordSet OUT SYS_REFCURSOR);
+
+END getData;
