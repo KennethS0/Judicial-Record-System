@@ -19,12 +19,8 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             
     -- SHOWS ALL THE NEW RECORDS IN THE DAY
     PROCEDURE getNewRecords (pRecordSet OUT SYS_REFCURSOR) AS
-    advalue VARCHAR2(20);
     BEGIN
         OPEN pRecordSet FOR
-            -- SELECT FROM PARAMETER FROM AD
-            SELECT value INTO advalue FROM ad.parameter 
-            WHERE name = 'NEW_RECORDS';
         
             -- Shows the number of new records in the database.
             -- A record is considered new if it is inserted the same day.1
@@ -39,18 +35,16 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             ON o.id = jn.office_id
             
             -- Condition to show all the records that were made in the day.
-            WHERE r.creation_date >= SYSDATE - CAST(advalue AS NUMBER); 
+            WHERE r.creation_date >= SYSDATE - CAST((SELECT value FROM ad.parameter 
+            WHERE name = 'NEW_RECORDS') AS NUMBER); 
     END;
     
     
     -- SHOWS ALL THE USERS THAT HAVEN'T CHANGED THEIR PASSWORD IN THE LAST 10 DAYS
     PROCEDURE getUnmodifiedPasswords(pRecordSet OUT SYS_REFCURSOR) AS
-    advalue VARCHAR2(20);
     BEGIN
         OPEN pRecordSet FOR
             -- GET PARAMETER VALUE
-            SELECT value INTO advalue FROM ad.parameter
-            WHERE name = 'UNMODIFIED_PASSWORDS';
         
             -- Shows all the unmodified passwords from the past 10 days.
             SELECT UNIQUE(ua.username) FROM ad.passwordhistory ph
@@ -60,7 +54,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             ON ua.id = ph.user_id
             
             -- Condition to show only passwords created more than 10 days ago.
-            WHERE ph.creation_date <= SYSDATE - CAST(advalue AS NUMBER); 
+            WHERE ph.creation_date <= SYSDATE - CAST(( SELECT value FROM ad.parameter WHERE name = 'UNMODIFIED_PASSWORDS') AS NUMBER); 
     END;
     
     

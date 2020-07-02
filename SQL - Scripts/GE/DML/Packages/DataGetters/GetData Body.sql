@@ -33,4 +33,18 @@ CREATE OR REPLACE PACKAGE BODY getData AS
     
             WHERE u.id = pUserId AND r.sue_id IS NULL;
     END;
+    
+    -- GETS THE ID OF THE LAWSUIT
+    FUNCTION getLawsuitId (pDefendantId NUMBER, pProsecutorId NUMBER, pReason VARCHAR2)
+    RETURN NUMBER
+    IS
+        vId NUMBER(6);
+    BEGIN
+        SELECT id INTO vId FROM person_sues_person
+        WHERE defendant = pDefendantId AND
+        prosecutor = pProsecutorId AND reason = pReason;
+        
+        RETURN (vId);
+    END;
+    
 END getData;

@@ -16,5 +16,8 @@ CREATE OR REPLACE PACKAGE userdata AS
     FUNCTION isAdmin (pId NUMBER)
     RETURN NUMBER;
 
+    FUNCTION getPersonFromAccount (pId NUMBER)
+    RETURN NUMBER;
+
 END userdata;
 /

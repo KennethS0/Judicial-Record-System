@@ -57,7 +57,7 @@ class LogInController:
         try:
             # Connects to the database to log the user
             self.model.connect(self.GENERAL_CONNECTION)
-            self.model.logUser(username, password)
+            self.model.logUser(username.strip(), password)
 
             # Invokes the new window
             if self.model.getUser().isAdmin == True:

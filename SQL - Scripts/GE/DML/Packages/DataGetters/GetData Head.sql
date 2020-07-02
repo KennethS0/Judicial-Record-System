@@ -9,4 +9,7 @@ CREATE OR REPLACE PACKAGE getData AS
     -- GET LAWSUITS WITHOUT RECORD
     PROCEDURE getRecordlessLawsuits (pUserId NUMBER, pRecordSet OUT SYS_REFCURSOR);
 
+    -- GETS THE ID OF THE LAWSUIT
+    FUNCTION getLawsuitId (pDefendantId NUMBER, pProsecutorId NUMBER, pReason VARCHAR2)
+    RETURN NUMBER;
 END getData;

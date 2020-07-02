@@ -51,5 +51,21 @@ CREATE OR REPLACE PACKAGE BODY userdata AS
         RETURN(verified);
     END;
     
+    
+    FUNCTION getPersonFromAccount (pId NUMBER)
+    RETURN NUMBER
+    IS
+        vId NUMBER(10);
+    BEGIN
+        SELECT citizenship_id into vId FROM person p
+        
+        INNER JOIN useraccount u
+        ON p.user_id = u.id
+        
+        WHERE u.id = pId;
+        
+        RETURN vId;
+    END;
+    
 END userdata;
 /

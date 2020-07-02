@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtWidgets import *
 
 class Ui_UserHome(object):
     def setupUi(self, UserHome):
@@ -790,15 +790,13 @@ class Ui_UserHome(object):
         self.GenQueriesButton_GeneralQueries.setText("")
         self.GenQueriesButton_GeneralQueries.setFlat(True)
         self.GenQueriesButton_GeneralQueries.setObjectName("GenQueriesButton_GeneralQueries")
-        self.GeneralQueryDisplay_GeneralQueries = QtWidgets.QLabel(self.GeneralQueriesFrame)
+        self.GeneralQueryDisplay_GeneralQueries = QtWidgets.QListWidget(self.GeneralQueriesFrame)
         self.GeneralQueryDisplay_GeneralQueries.setGeometry(QtCore.QRect(710, 215, 691, 461))
         font = QtGui.QFont()
         font.setFamily("Source Sans Pro")
         font.setPointSize(12)
         self.GeneralQueryDisplay_GeneralQueries.setFont(font)
         self.GeneralQueryDisplay_GeneralQueries.setAutoFillBackground(False)
-        self.GeneralQueryDisplay_GeneralQueries.setText("")
-        self.GeneralQueryDisplay_GeneralQueries.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.GeneralQueryDisplay_GeneralQueries.setObjectName("GeneralQueryDisplay_GeneralQueries")
         self.RecordTypeFilter_GeneralQueries = QtWidgets.QComboBox(self.GeneralQueriesFrame)
         self.RecordTypeFilter_GeneralQueries.setGeometry(QtCore.QRect(400, 341, 83, 27))
@@ -811,7 +809,7 @@ class Ui_UserHome(object):
         self.QueryChoice_GeneralQueries.setGeometry(QtCore.QRect(551, 200, 151, 28))
         font = QtGui.QFont()
         font.setFamily("Source Sans Pro")
-        font.setPointSize(12)
+        font.setPointSize(9)
         self.QueryChoice_GeneralQueries.setFont(font)
         self.QueryChoice_GeneralQueries.setObjectName("QueryChoice_GeneralQueries")
         self.DistrictFilter_GeneralQueries = QtWidgets.QComboBox(self.GeneralQueriesFrame)
