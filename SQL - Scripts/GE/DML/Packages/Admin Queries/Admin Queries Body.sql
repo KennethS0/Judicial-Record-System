@@ -2,18 +2,18 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
 
 
     -- GETS ALL THE USERS THAT HAD THEIR PASSWORDS MODIFIED IN A RANGE OF DATES
-    PROCEDURE getModifiedPasswords (pInitialDate IN DATE, pFinalDate IN DATE, pRecordset OUT SYS_REFCURSOR) AS
+    PROCEDURE getModifiedPasswords (pInitialDate IN VARCHAR2, pFinalDate IN VARCHAR2, pRecordset OUT SYS_REFCURSOR) AS
     BEGIN
      OPEN pRecordset FOR   
         -- Shows all the accounts that have changed their password in a range of dates.
-        SELECT UNIQUE(ua.username) FROM ad.passwordhistory ph
+        SELECT UNIQUE(ua.username) username FROM ad.passwordhistory ph
 
         -- Joins with USERACCOUNT (ua) to get the id inside of PASSWORDHISTORY
         INNER JOIN useraccount ua
         ON ua.id = ph.user_id
 
         -- Condition to show in a range of two dates.
-        WHERE ph.creation_date BETWEEN pInitialDate AND pFinalDate + 1; 
+        WHERE ph.creation_date BETWEEN TO_DATE(pInitialDate, 'YYYY/MM/DD') AND TO_DATE(pFinalDate, 'YYYY/MM/DD') + 1; 
     END;
         
             
@@ -47,7 +47,7 @@ CREATE OR REPLACE PACKAGE BODY ADMIN_QUERIES AS
             -- GET PARAMETER VALUE
         
             -- Shows all the unmodified passwords from the past 10 days.
-            SELECT UNIQUE(ua.username) FROM ad.passwordhistory ph
+            SELECT UNIQUE(ua.username) username FROM ad.passwordhistory ph
             
             -- Joins with USERACCOUNT(ua) to get the corresponding id's
             INNER JOIN useraccount ua

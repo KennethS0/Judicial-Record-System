@@ -244,10 +244,20 @@ class UserController:
 
         try: 
             result = self.model.userQuery(I.PROCEDURE, instruction, parameters=data, getRows=True)
-            for i in result:
+            
+            header = ''
+            # PRINTS COLUMN NAMES
+            for column in result.description:
+                header += "    |   " + str(column[0])
+
+            self.view.GeneralQueryDisplay_GeneralQueries.addItem(header)
+            self.view.GeneralQueryDisplay_GeneralQueries.addItem('-'*1000)
+            # PRINTS VALUES
+            for row in result:
                 string = ''
-                for j in i:
-                    string += " | " + str(j)
+                for data in row:
+                    string += "    |   " + str(data)
+
                 self.view.GeneralQueryDisplay_GeneralQueries.addItem(string)
         except:
             return

@@ -9,7 +9,7 @@
 
 
 from PyQt5 import QtCore, QtGui, QtWidgets
-
+from PyQt5.QtWidgets import *
 
 class Ui_MainMenu(object):
     def setupUi(self, MainMenu):
@@ -1844,21 +1844,19 @@ class Ui_MainMenu(object):
         self.CommunityFilter_GeneralQueries.setFont(font)
         self.CommunityFilter_GeneralQueries.setObjectName("CommunityFilter_GeneralQueries")
         self.QueryChoice_GeneralQueries = QtWidgets.QComboBox(self.GeneralQueriesFrame)
-        self.QueryChoice_GeneralQueries.setGeometry(QtCore.QRect(560, 188, 151, 28))
+        self.QueryChoice_GeneralQueries.setGeometry(QtCore.QRect(510, 188, 201, 28))
         font = QtGui.QFont()
         font.setFamily("Source Sans Pro")
-        font.setPointSize(12)
+        font.setPointSize(7)
         self.QueryChoice_GeneralQueries.setFont(font)
         self.QueryChoice_GeneralQueries.setObjectName("QueryChoice_GeneralQueries")
-        self.GeneralQueryDisplay__GeneralQueries = QtWidgets.QLabel(self.GeneralQueriesFrame)
+        self.GeneralQueryDisplay__GeneralQueries = QtWidgets.QListWidget(self.GeneralQueriesFrame)
         self.GeneralQueryDisplay__GeneralQueries.setGeometry(QtCore.QRect(717, 202, 691, 461))
         font = QtGui.QFont()
         font.setFamily("Source Sans Pro")
         font.setPointSize(12)
         self.GeneralQueryDisplay__GeneralQueries.setFont(font)
         self.GeneralQueryDisplay__GeneralQueries.setAutoFillBackground(False)
-        self.GeneralQueryDisplay__GeneralQueries.setText("")
-        self.GeneralQueryDisplay__GeneralQueries.setAlignment(QtCore.Qt.AlignLeading|QtCore.Qt.AlignLeft|QtCore.Qt.AlignTop)
         self.GeneralQueryDisplay__GeneralQueries.setObjectName("GeneralQueryDisplay__GeneralQueries")
         self.ResolutionButton_GeneralQueries = QtWidgets.QPushButton(self.GeneralQueriesFrame)
         self.ResolutionButton_GeneralQueries.setGeometry(QtCore.QRect(0, 570, 241, 51))
