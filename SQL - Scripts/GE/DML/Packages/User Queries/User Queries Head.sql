@@ -9,19 +9,19 @@ CREATE OR REPLACE PACKAGE user_queries AS
     PROCEDURE getDangerousZones (pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS ALL THE SENTENCES THAT ARE SOON TO EXPIRE
-    PROCEDURE getSoonToExpire (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR);
+    PROCEDURE getSoonToExpire (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS A RANKING OF THE LONGEST SENTENCES
-    PROCEDURE getLongestSentences (pInitialDate DATE, pFinalDate Date, pRecordSet OUT SYS_REFCURSOR);
+    PROCEDURE getLongestSentences (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS FILES THROUGH A NUMBER OF FILTERS
-    PROCEDURE getFileteredFiles (pInitialDate DATE, pFinalDate DATE, pRecordType NUMBER, pCantonId NUMBER, pRecordSet OUT SYS_REFCURSOR);
+    PROCEDURE getFileteredFiles (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordType NUMBER, pCantonId NUMBER, pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS ALL CRIMES COMMITED BY ONE PERSON
     PROCEDURE getCommitedCrimes (pPersonId NUMBER, pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS A RANKING OF THE PEOPLE WITH THE MOST AMOUNT OF CRIMES
-    PROCEDURE getMostCrimesCommitted (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR);
+    PROCEDURE getMostCrimesCommitted (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordSet OUT SYS_REFCURSOR);
  
     
 END user_queries;

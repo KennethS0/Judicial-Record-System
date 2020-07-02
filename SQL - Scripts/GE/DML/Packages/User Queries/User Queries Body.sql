@@ -29,12 +29,7 @@ CREATE OR REPLACE PACKAGE BODY user_queries AS
     
     -- GETS LIST OF THE MOST DANGEROUS CANTONS
     PROCEDURE getDangerousZones (pRecordSet OUT SYS_REFCURSOR) AS
-    advalue VARCHAR2(20);
     BEGIN
-        -- OBTAINS THE VARIABLE
-        SELECT value INTO advalue FROM ad.parameter 
-        WHERE name = 'TOP_DANGEROUS_ZONES';
-        
         -- QUERY
         OPEN pRecordSet FOR
             SELECT * FROM
@@ -70,18 +65,16 @@ CREATE OR REPLACE PACKAGE BODY user_queries AS
                 GROUP BY can.name, can.id, prov.name, (can.name)||', '||prov.name
                 ORDER BY COUNT(can.id) DESC
             )
-        WHERE ROWNUM <= CAST(advalue AS NUMBER);
+        WHERE ROWNUM <= CAST((
+        -- OBTAINS THE VARIABLE
+        SELECT value FROM ad.parameter 
+        WHERE name = 'TOP_DANGEROUS_ZONES') AS NUMBER);
     END;
     
     
     -- GETS ALL THE SENTENCES THAT ARE SOON TO EXPIRE
-    PROCEDURE getSoonToExpire (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR) AS
-    advalue VARCHAR2(20);
+    PROCEDURE getSoonToExpire (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordSet OUT SYS_REFCURSOR) AS
     BEGIN
-        -- OBTAINS THE VARIABLE
-        SELECT value INTO advalue FROM ad.parameter 
-        WHERE name = 'TOP_DANGEROUS_ZONES';
-        
         -- QUERY
         OPEN pRecordSet FOR
             SELECT jn.year ||'-'|| jn.consecutive ||'-'|| o.id ||'-'|| o.subject_code record_number,   
@@ -114,20 +107,19 @@ CREATE OR REPLACE PACKAGE BODY user_queries AS
             INNER JOIN person p
             ON psp.defendant = p.citizenship_id
     
-            WHERE (s.final_date BETWEEN pInitialDate AND pFinalDate - CAST(advalue AS NUMBER))
-            OR (s.final_date < pInitialDate);
+            WHERE (s.final_date BETWEEN TO_DATE(pInitialDate, 'YYYY/MM/DD') AND TO_DATE(pFinalDate, 'YYYY/MM/DD') - CAST((
+        -- OBTAINS THE VARIABLE
+        SELECT value FROM ad.parameter 
+        WHERE name = 'SOON_TO_EXPIRE_DAYS')AS NUMBER))
+            OR (s.final_date < TO_DATE(pInitialDate, 'YYYY/MM/DD'));
     END;
     
     
 
     -- GETS A RANKING OF THE LONGEST SENTENCES
-    PROCEDURE getLongestSentences (pInitialDate DATE, pFinalDate Date, pRecordSet OUT SYS_REFCURSOR) AS
+    PROCEDURE getLongestSentences (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordSet OUT SYS_REFCURSOR) AS
         advalue VARCHAR2(20);
     BEGIN
-        -- OBTAINS THE VARIABLE
-        SELECT value INTO advalue FROM ad.parameter 
-        WHERE name = 'TOP_LONGEST_SENTENCES';
-        
         -- QUERY
         OPEN pRecordSet FOR
             SELECT * FROM 
@@ -159,19 +151,23 @@ CREATE OR REPLACE PACKAGE BODY user_queries AS
                 INNER JOIN person p
                 ON psp.defendant = p.citizenship_id
      
-                WHERE (s.final_date BETWEEN pInitialDate AND pFinalDate) OR
-                      (s.initial_date BETWEEN pInitialDate AND pFinalDate)
+                WHERE (s.final_date BETWEEN TO_DATE(pInitialDate, 'YYYY/MM/DD') AND TO_DATE(pFinalDate, 'YYYY/MM/DD')) OR
+                      (s.initial_date BETWEEN TO_DATE(pInitialDate,'YYYY/MM/DD') AND TO_DATE(pFinalDate, 'YYYY/MM/DD'))
      
                 GROUP BY p.first_name, p.middle_name,
                          p.last_name, p.secondlast_name, 
                          s.initial_date, s.final_date,
                          toc.name
                 ORDER BY (s.final_date - s.initial_date) DESC)
-        WHERE ROWNUM <= CAST(advalue AS NUMBER);
+        WHERE ROWNUM <= CAST((
+        -- OBTAINS THE VARIABLE
+        SELECT value FROM ad.parameter 
+        WHERE name = 'TOP_LONGEST_SENTENCES'
+        ) AS NUMBER(30));
     END;
     
     -- GETS THE FILES WITH A SERIES OF FILTERS
-    PROCEDURE getFileteredFiles (pInitialDate DATE, pFinalDate DATE, pRecordType NUMBER, pCantonId NUMBER, pRecordSet OUT SYS_REFCURSOR) AS
+    PROCEDURE getFileteredFiles (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordType NUMBER, pCantonId NUMBER, pRecordSet OUT SYS_REFCURSOR) AS
     BEGIN
         OPEN pRecordSet FOR            
             SELECT * FROM crime;
@@ -212,12 +208,8 @@ CREATE OR REPLACE PACKAGE BODY user_queries AS
     END;
         
     -- GETS A RANKING OF THE PEOPLE WITH THE MOST AMOUNT OF CRIMES
-    PROCEDURE getMostCrimesCommitted (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR) AS    
-        advalue VARCHAR2(20);
+    PROCEDURE getMostCrimesCommitted (pInitialDate VARCHAR2, pFinalDate VARCHAR2, pRecordSet OUT SYS_REFCURSOR) AS
     BEGIN
-        -- OBTAINS THE VARIABLE
-        SELECT value INTO advalue FROM ad.parameter 
-        WHERE name = 'TOP_MOST_COMMITTED_CRIMES';
         
         -- QUERY
         OPEN pRecordSet FOR
@@ -238,14 +230,14 @@ CREATE OR REPLACE PACKAGE BODY user_queries AS
             INNER JOIN person p
             ON p.citizenship_id = psp.defendant
     
-            WHERE c.date_commited BETWEEN pInitialDate AND pFinalDate
+            WHERE c.date_commited BETWEEN TO_DATE(pInitialDate,'YYYY/MM/DD') AND TO_DATE(pFinalDate,'YYYY/MM/DD')
     
             GROUP BY p.first_name, p.middle_name,
                      p.last_name, p.secondlast_name,
                      p.citizenship_id
             ORDER BY COUNT(c.id) DESC
             )
-        WHERE ROWNUM <= CAST(advalue AS NUMBER);
+        WHERE ROWNUM <= 3;
     END;
 END user_queries;
 /

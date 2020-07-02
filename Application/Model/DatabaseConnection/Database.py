@@ -246,3 +246,10 @@ class Database():
         Returns the connected user
         '''
         return self.connectedUser
+
+
+    def insertRecord(self, sue_id, ):
+        '''
+        data[0] = sue_id
+        '''
+        pass

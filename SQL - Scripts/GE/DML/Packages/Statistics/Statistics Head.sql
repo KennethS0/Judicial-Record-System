@@ -3,7 +3,7 @@ CREATE OR REPLACE PACKAGE statistics AS
     PROCEDURE getAccountRanges (pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS ALL EXPIRED SENTENCES IN THE SYSTEM BETWEEN A RANGE OF DATES
-    PROCEDURE getExpiredSentences (pInitialDate DATE, pFinalDate DATE, pRecordSet OUT SYS_REFCURSOR);
+    PROCEDURE getExpiredSentences (pRecordSet OUT SYS_REFCURSOR);
     
     -- GETS ALL THE FILES FILTERES BY ZONE
     PROCEDURE getFilesByZone (pCountry VARCHAR2,
